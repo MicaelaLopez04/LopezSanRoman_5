@@ -1,64 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi perfil - Aerolineas Argentinas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi perfil - Aerolineas Argentinas</title>
 
-    <link rel="stylesheet" href="css/style_profile.css">
-    <link rel="icon" href="images/condor.png">
+  <link rel="stylesheet" href="css/style_profile.css">
+  <link rel="icon" href="images/condor.png">
 </head>
+
 <body>
-   
-    <div class="container">
-        <nav class="nav_profile">
-            <ul>
-                <li> <a href="#"></a> Inicio</li>
-                <li> <a href="#"></a> Perfil</li>
-                <li> <a href="#"></a> Reservas</li>
-                <li> <a href="#"></a> Buscar</li>
-            </ul>
-        </nav>
 
-        <main class="profile">
-          <header class="header_profile">
-            <div id="profile_pic">
-               <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 16 16">
-                   <!-- Cabeza (blanca) -->
-                   <circle id="head" class="person-part" cx="8" cy="6" r="3" fill="white" />
+  <div class="container">
+    <nav class="nav_profile">
+      <ul>
+        <li> <a href="#"></a> Inicio</li>
+        <li> <a href="#"></a> Perfil</li>
+        <li> <a href="#"></a> Reservas</li>
+        <li> <a href="#"></a> Buscar</li>
+      </ul>
+    </nav>
 
-                   <!-- Cuerpo (blanco) un poco más abajo para separación -->
-                   <path id="body" class="person-part" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3z" fill="white"
-                     transform="translate(0,1)"
-                   />
+    <main class="profile">
+      <header class="header_profile">
+        <div id="profile_pic">
+          <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 16 16">
+            <!-- Cabeza (blanca) -->
+            <circle id="head" class="person-part" cx="8" cy="6" r="3" fill="white" />
 
-                   <!-- Borde (círculo con stroke, sin relleno) -->
-                   <circle id="border" stroke="#3c74a6" stroke-width="2" fill="none" cx="8" cy="8" r="7" />
-               </svg>
-            </div>
+            <!-- Cuerpo (blanco) un poco más abajo para separación -->
+            <path id="body" class="person-part" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3z" fill="white"
+              transform="translate(0,1)" />
 
-            <div>
-              <h1>Mi Perfil</h1>
-              <a href="#">Editar foto</a> | <a href="#">Borrar foto</a>
-            </div>
-          </header>
+            <!-- Borde (círculo con stroke, sin relleno) -->
+            <circle id="border" stroke="#3c74a6" stroke-width="2" fill="none" cx="8" cy="8" r="7" />
+          </svg>
+        </div>
 
-            <form class="profile_form">
-                <label>Nombre de usuario <span>*nombre de usuario ingresado✎</span></label>
-                <label>Nombre <span>*nombre ingresado ✎</span></label>
-                <label>Apellido <span>*apellido ingresado ✎</span></label>
-                <label>Email <span>*direccion de email ingresada ✎</span></label>
-                <label>Contraseña <span>*contraseña ingresada ✎</span></label>
-                <label>Fecha de nacimiento <span>*fecha ingresada ✎</span></label>
+        <div>
+          <h1>Mi Perfil</h1>
+          <a href="#">Editar foto</a> | <a href="#">Borrar foto</a>
+        </div>
+      </header>
 
-                <div class="button_profile">
-                   <button type="button" id="btn_cancel">Cancelar</button>
-                   <button type="submit" id="btn_keep">Guardar cambios</button>
-                </div>
-            </form>
+      <form class="profile_form">
+        <label>Nombre de usuario <span>*nombre de usuario ingresado <button class="btn_edit"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path
+                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd"
+                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+              </svg></button></span></label>
+        <label>Nombre <span>*nombre ingresado <button class="btn_edit"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path
+                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd"
+                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+              </svg></button></span></label>
+        <label>Apellido <span>*apellido ingresado <button class="btn_edit"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path
+                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd"
+                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+              </svg></button></span></label>
+        <label>Email <span>*direccion de email ingresada </span></label>
+        <label>Contraseña <span>*contraseña ingresada <button id="btn_pass"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+              </svg></button><button class="btn_edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path
+                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd"
+                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+              </svg></button></span></label>
+        <label>Fecha de nacimiento <span>*fecha ingresada <button class="btn_edit"><svg
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path
+                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                <path fill-rule="evenodd"
+                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+              </svg></button></span></label>
 
-        </main>
-    </div>
-   
+        <div class="button_profile">
+          <button type="button" id="btn_cancel">Cancelar</button>
+          <button type="submit" id="btn_keep"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              fill="currentColor" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+              <path
+                d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0z" />
+            </svg>Guardar cambios</button>
+        </div>
+      </form>
+
+    </main>
+  </div>
+
 </body>
+
 </html>
