@@ -42,7 +42,7 @@
             <h1>Aerolineas plus</h1>
         </section>
         <section id="section_form">
-            <form action="">
+            <form id="form_datos_cuenta" action="">
                 <h2>Datos de cuenta</h2>
 
                 <section id="section_user_pass">
@@ -69,11 +69,48 @@
                     </article>
                 </section>
 
-                <section id="section_buttons">
+                <section class="section_buttons">
                     <button id="btn_next">Siguiente</button>
                     <button id="btn_cancel">Cancelar</button>
                 </section>
+            </form>
 
+            <form id="form_datos_personales" action="">
+                 <h2>Datos personales</h2>
+
+                <section id="section_name">
+                    <article>
+                        <label for="">Nombre</label>
+                        <input type="text" name="nombre" placeholder="Ingrese su nombre">
+                    </article>
+                    <article>
+                        <label for="">Apellido</label>
+                        <input type="text" name="apellido" placeholder="Ingrese su apellido">
+                    </article>
+                    <article>
+                        <label for="">Dia  de nacimiento</label>
+                        <input type="date" name="date">
+                    </article>
+                </section>
+
+                <section id="section_document">
+                    <article id="article_type">
+                        <label for="">Tipo de documento</label>
+                        <select name="type" id="" value="Selecciona">
+                            <option value="dni">DNI</option>
+                            <option value="pasaporte">PASAPORTE</option>
+                        </select>
+                    </article>
+                    <article id="article_number">
+                        <label for="">Numero de documento</label>
+                        <input type="number" name="document" placeholder="Ingrese su numero de documento">
+                    </article>
+                </section>
+
+                <section class="section_buttons">
+                    <button id="btn_create">Crear cuenta</button>
+                    <button id="btn_prev">Volver</button>
+                </section>
             </form>
             <div id="img"></div>
         </section>
