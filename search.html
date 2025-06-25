@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Vuelos - Aerolineas Argentinas</title>
+
+    <link rel="stylesheet" href="css/style_search.css">
+    <link rel="icon" href="images/condor.png">
+</head>
+
+<body>
+
+    <body>
+
+        <div class="container">
+            <nav class="nav_search">
+                <ul>
+                    <li> <a href="#"></a> Inicio</li>
+                    <li> <a href="#"></a> Perfil</li>
+                    <li> <a href="#"></a> Reservas</li>
+                    <li> <a href="#"></a> Buscar</li>
+                </ul>
+            </nav>
+
+            <main class="search">
+                <header class="header_search">
+                    <h1>Buscar Vuelos</h1>
+                </header>
+
+                <form class="search_form">
+                    <div class="form_radio">
+                        <label><input type="radio" name="tipo_viaje" value="ida" checked>Ida</label>
+                        <label><input type="radio" name="tipo_viaje" value="ida_y_vuelta">Ida y vuelta</label>
+                    </div>
+
+                    <div class="form_border">
+                        <!-- Fila 1 -->
+                        <div id="fila">
+                            <div>
+                                <label for="origin">Origen</label>
+                                <input type="text" id="origin" placeholder="Ingrese su origen">
+                            </div>
+                            <div>
+                                <label for="destiny">Destino</label>
+                                <input type="text" id="destiny" placeholder="Ingrese su destino">
+                            </div>
+                        </div>
+
+                        <!-- Fila 2 -->
+                        <div id="fila2">
+                            <div>
+                                <label for="fecha_ida">Fecha de ida</label>
+                                <input type="date" id="fecha_ida" name="fecha_ida" required>
+                            </div>
+                            <div>
+                                <label for="fecha_vuelta">Fecha de vuelta</label>
+                                <input type="date" id="fecha_vuelta" name="fecha_vuelta" required>
+                            </div>
+                        </div>
+
+                        <!-- Fila 3 -->
+                        <div id="fila3" class="selector_clase_pasajeros">
+                            <label for="toggle_clase_pasajeros">Clase / Pasajeros/as</label>
+                            <div class="selector_toggle" id="toggle_clase_pasajeros">
+                                Clase / Pasajeros/as <span class="flecha">▼</span>
+                            </div>
+
+                            <div class="selector_menu" id="menu_clase_pasajeros">
+                                <label>Clase</label>
+                                <div class="opcion_clase">
+                                    <input type="radio" name="clase" value="Economy" checked> Economy
+                                </div>
+                                <div class="opcion_clase">
+                                    <input type="radio" name="clase" value="Business"> Business
+                                </div>
+                                <div class="opcion_clase">
+                                    <input type="radio" name="clase" value="Premium economy"> Premium economy
+                                </div>
+
+                                <label>Pasajeros/as</label>
+                                <div class="grupo_pasajero">
+                                    Adultos +12 años
+                                    <button type="button" onclick="cambiar('adultos', -1)">−</button>
+                                    <input type="text" id="adultos" value="1" readonly>
+                                    <button type="button" onclick="cambiar('adultos', 1)">+</button>
+                                </div>
+                                <div class="grupo_pasajero">
+                                    Niños 2 a 11 años
+                                    <button type="button" onclick="cambiar('ninos', -1)">−</button>
+                                    <input type="text" id="ninos" value="0" readonly>
+                                    <button type="button" onclick="cambiar('ninos', 1)">+</button>
+                                </div>
+                                <div class="grupo_pasajero">
+                                    Bebés 0 a 23 meses
+                                    <button type="button" onclick="cambiar('bebes', -1)">−</button>
+                                    <input type="text" id="bebes" value="0" readonly>
+                                    <button type="button" onclick="cambiar('bebes', 1)">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="button_search">
+                        <button type="button" id="btn_cancel">Cancelar</button>
+                        <button type="submit" id="btn_search">Buscar Vuelos</button>
+                    </div>
+                </form>
+            </main>
+        </div>
+        <script src="js/search.js"></script>
+    </body>
+
+</html>

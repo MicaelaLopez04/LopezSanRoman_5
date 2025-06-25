@@ -1,0 +1,270 @@
+/* VARIABLES */
+:root {
+    --primary_font: "Source Sans 3", sans-serif;
+    --primary_color: #3c74a6;
+    --primary_color_opacity: #3c75a682;
+    --color_red_cancel: #a50404;
+}
+
+.container {
+    display: flex;
+}
+
+.nav_search {
+    width: 200px;
+    padding: 30px 0px 20px 10px;
+    border-right: 8px solid var(--primary_color_opacity);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 25px 70px 25px 15px;
+    color: var(--primary_color);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+li:hover {
+    color: #ffffff;
+    background-color: var(--primary_color_opacity);
+
+}
+
+.search {
+    flex: 1;
+}
+
+.header_search {
+    display: flex;
+    border-bottom: 4px solid var(--primary_color);
+}
+
+h1 {
+    font-family: var(--primary_font);
+    font-size: 60px;
+    font-weight: 100;
+    color: var(--primary_color);
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #808080;
+    font-size: 21px;
+    font-weight: 100;
+}
+
+.search_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.search_form>*:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.form_radio {
+    display: flex;
+    gap: 100px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.form_radio label {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="radio"] {
+    accent-color: var(--primary_color);
+}
+
+.form_border {
+    border: 2px solid var(--primary_color);
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#fila,
+#fila2 {
+    display: flex;
+    gap: 20px;
+}
+
+#fila2 {
+    display: flex;
+    justify-content: center;
+    /* centra horizontalmente */
+    gap: 20px;
+    /* espacio entre los campos */
+}
+
+#fila>div,
+#fila2>div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+#fila3 {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;*/
+    align-items: center;
+    /* centra el contenido horizontalmente */
+    /* width: fit-content;*/
+    /* ajusta al tamaño del contenido */
+    margin: 0 auto;
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #808080;
+}
+
+input,
+select {
+    padding: 15px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    color: #808080;
+}
+
+select {
+    padding-right: 25px;
+}
+
+input {
+    margin-bottom: 20px;
+    padding-right: 40px;
+}
+
+#fila3 #toggle_clase_pasajeros {
+    color: #808080;
+}
+
+#fila3.selector_clase_pasajeros {
+    position: relative;
+    width: 300px;
+}
+
+#fila3.selector_clase_pasajeros .selector_toggle {
+    margin-top: 15px;
+    position: relative;
+    padding: 10px 80px 10px 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.selector_toggle .flecha {
+    position: absolute;
+    right: 12px;
+    /* ajustá según necesidad */
+    pointer-events: none;
+}
+
+#fila3.selector_clase_pasajeros .selector_menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#fila3.selector_clase_pasajeros.abierto .selector_menu {
+    display: flex;
+}
+
+#fila3.selector_clase_pasajeros .opcion_clase {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#fila3.selector_clase_pasajeros .grupo_pasajero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+#fila3.selector_clase_pasajeros .grupo_pasajero input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+#fila3.selector_clase_pasajeros .grupo_pasajero button {
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button_search {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    width: 100%;
+    /* para que ocupe todo el ancho disponible */
+    padding-right: 40px;
+    /* espacio desde el borde derecho */
+    gap: 10px;
+}
+
+#btn_cancel {
+    padding: 5px 20px;
+    margin: 10px;
+    border: 1px solid var(--primary_color);
+    background-color: #ffffff;
+    color: var(--primary_color);
+    border-radius: 2px;
+}
+
+#btn_cancel:hover {
+    background-color: var(--color_red_cancel);
+    color: #ffffff;
+    border: none;
+}
+
+#btn_search {
+    padding: 5px 50px;
+    border: 1px solid var(--primary_color);
+    background-color: var(--primary_color);
+    color: #ffffff;
+    border-radius: 2px;
+}
+
+#btn_search:hover {
+    background-color: var(--primary_color_opacity);
+    border: none;
+}
