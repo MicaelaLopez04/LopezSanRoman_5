@@ -45,12 +45,8 @@ main {
         width: 70%;
         border: 1px solid var(--primary_color);
 
-        #form_datos_cuenta {
-            display: none;
-        }
-
         #form_datos_personales {
-            /* display: none; */
+            display: none;
         }
 
         form {
