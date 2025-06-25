@@ -9,9 +9,9 @@
   <link rel="icon" href="images/condor.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -26,28 +26,28 @@
       </ul>
     </nav>
 
+    <header class="header_profile">
+      <div id="profile_pic">
+        <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 16 16">
+          <!-- Cabeza (blanca) -->
+          <circle id="head" class="person-part" cx="8" cy="6" r="3" fill="white" />
+
+          <!-- Cuerpo (blanco) un poco más abajo para separación -->
+          <path id="body" class="person-part" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3z" fill="white"
+            transform="translate(0,1)" />
+
+          <!-- Borde (círculo con stroke, sin relleno) -->
+          <circle id="border" stroke="#3c74a6" stroke-width="2" fill="none" cx="8" cy="8" r="7" />
+        </svg>
+      </div>
+
+      <div>
+        <h1>Mi Perfil</h1>
+        <a href="#">Editar foto</a> | <a href="#">Borrar foto</a>
+      </div>
+    </header>
+
     <main class="profile">
-      <header class="header_profile">
-        <div id="profile_pic">
-          <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 16 16">
-            <!-- Cabeza (blanca) -->
-            <circle id="head" class="person-part" cx="8" cy="6" r="3" fill="white" />
-
-            <!-- Cuerpo (blanco) un poco más abajo para separación -->
-            <path id="body" class="person-part" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3z" fill="white"
-              transform="translate(0,1)" />
-
-            <!-- Borde (círculo con stroke, sin relleno) -->
-            <circle id="border" stroke="#3c74a6" stroke-width="2" fill="none" cx="8" cy="8" r="7" />
-          </svg>
-        </div>
-
-        <div>
-          <h1>Mi Perfil</h1>
-          <a href="#">Editar foto</a> | <a href="#">Borrar foto</a>
-        </div>
-      </header>
-
       <form class="profile_form">
         <label>Nombre de usuario <span>*nombre de usuario ingresado <button class="btn_edit"><svg
                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

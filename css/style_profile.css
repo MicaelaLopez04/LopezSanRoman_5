@@ -7,11 +7,20 @@
 
 .container {
     font-family: var(--primary_font);
-    display: flex;
+    display: grid;
+    grid-template-columns: 12.5em 1fr;
+    /* nav y el resto */
+    grid-template-rows: 30vh 1fr;
+    /* header y main */
+    grid-template-areas:
+        "nav header"
+        "nav main";
+    height: 100vh;
+    /* para que tome todo el alto */
 }
 
 .nav_profile {
-    width: 12.5em;
+    grid-area: nav;
     padding: 1.8em 0em 1.2em 0em;
     border-right: 8px solid var(--primary_color_opacity);
 }
@@ -44,10 +53,12 @@ li:hover {
 }
 
 .profile {
+    grid-area: main;
     flex: 1;
 }
 
 .header_profile {
+    grid-area: header;
     display: flex;
     border-bottom: 4px solid var(--primary_color);
 }
@@ -109,7 +120,6 @@ a {
 .button_profile {
     display: flex;
     justify-content: flex-end;
-    margin-right: 40px;
     align-items: center;
     gap: 1em;
     height: 4em;
