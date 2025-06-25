@@ -3,12 +3,13 @@
     --primary_font: "Source Sans 3", sans-serif;
     --primary_color: #3c74a6;
     --primary_color_opacity: #3c75a682;
+    --color_red_cancel: #a50404;
 }
 
 .container {
     font-family: var(--primary_font);
     display: grid;
-    grid-template-columns: 12.5em 1fr;
+    grid-template-columns: 17em 1fr;
     /* nav y el resto */
     grid-template-rows: 30vh 1fr;
     /* header y main */
@@ -139,7 +140,7 @@ a {
     font-size: 0.9em;
 
     &:hover {
-        background-color: rgb(165, 4, 4);
+        background-color: var(--color_red_cancel);
         color: white;
         border: none;
     }
