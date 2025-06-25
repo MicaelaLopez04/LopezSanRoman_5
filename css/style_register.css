@@ -1,0 +1,153 @@
+/* VARIABLES */
+:root {
+    --primary_font: "Source Sans 3", sans-serif;
+    --primary_color: #3C74A6;
+    --primary_color_opacity: #3c75a682;
+}
+
+main {
+    font-family: var(--primary_font);
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    #section_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 20%;
+
+        h1 {
+            font-size: 4em;
+            margin: 0em;
+            color: var(--primary_color);
+            font-weight: 450;
+            font-style: italic;
+        }
+
+        h4 {
+            font-weight: 400;
+            font-size: 1em;
+            margin: 0em;
+        }
+    }
+
+
+    #section_form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60%;
+        width: 70%;
+        border: 1px solid var(--primary_color);
+
+        form {
+            width: 95%;
+
+            h2 {
+                font-size: 1.7em;
+                margin: 0em 0em 0.5em;
+                font-weight: 300;
+            }
+
+            section {
+                display: flex;
+                /* border: 1px solid black; */
+                margin-left: 2em;
+
+                article {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            #section_user_pass {
+                gap: 7em;
+
+                #btn_pass {
+                    border: none;
+                    background: none;
+                    align-self: flex-end;
+                    margin: -5em -3.7em ;
+                    color: var(--primary_color);
+                    cursor: pointer;
+                    z-index: 2;
+                }
+            }
+
+            #section_email {
+                input {
+                    width: 160%;
+                }
+            }
+
+            label {
+                font-size: 1em;
+            }
+
+            input {
+                width: 120%;
+                height: 2em;
+                margin: 0.5em 0em 3em 0.7em;
+            }
+
+            #section_buttons {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+                height: 4em;
+                
+                button{
+                    cursor: pointer;
+                    font-family: var(--primary_font);
+                }
+
+                #btn_next {
+                    background-color: var(--primary_color);
+                    color: white;
+                    border: none;
+                    width: 6em;
+                    height: 2em;
+                    font-size: 1.3em;
+
+                    &:hover {
+                        background-color: white;
+                        border: 1px solid var(--primary_color);
+                        color: var(--primary_color);
+                    }
+                }
+
+                #btn_cancel {
+                    background: none;
+                    border: 1px solid var(--primary_color);
+                    color: var(--primary_color);
+                    width: 5em;
+                    height: 2em;
+                    font-size: 0.9em;
+
+
+                    &:hover {
+                        background-color: rgb(165, 4, 4);
+                        color: white;
+                        border: none;
+                    }
+
+                }
+            }
+        }
+
+        #img {
+            position: absolute;
+            right: 13em;
+            bottom: 1em;
+            width: 25em;
+            height: 20em;
+            background: url('../images/avion_register.png');
+            background-size: 100%;
+
+        }
+    }
+}
