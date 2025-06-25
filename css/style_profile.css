@@ -1,0 +1,111 @@
+/* VARIABLES */
+:root {
+    --primary_font: "Source Sans 3", sans-serif;
+    --primary_color: #3c74a6;
+    --primary_color_opacity: #3c75a682;
+}
+
+.container{
+    display: flex;
+}
+.nav_profile{
+    width: 200px;
+    padding: 30px 0px 20px 10px;
+    border-right: 8px solid var(--primary_color_opacity);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 25px 70px 25px 15px;
+  color: var(--primary_color);
+  font-size: 25px;
+  cursor: pointer;
+}
+li:hover{
+    color: #ffffff;
+    background-color: var(--primary_color_opacity);
+
+}
+.profile{
+    flex: 1; 
+}
+.header_profile{
+  display: flex;
+  border-bottom: 4px solid var(--primary_color);
+}
+#profile_pic{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 170px;
+   height: 170px;
+   color: #ffffff ;
+   background-color: var(--primary_color);
+   border-radius: 60%;
+   margin: 15px 40px; 
+   overflow: hidden;
+}
+.icono{
+  width: 170px;
+  height: 170px;
+}
+h1{
+    font-family: var(--primary_font);
+    font-size: 60px;
+    font-weight: 100;
+    color:var(--primary_color);
+    margin-bottom: 10px;
+}
+a{
+  text-decoration: none;
+  color: #808080;
+  font-size: 21px;
+  font-weight: 100;
+}
+.profile_form{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.profile_form label{
+    display: flex;
+    flex-direction: column;
+    color: #808080;
+    font-size: 20px;
+}
+.profile_form span{
+    margin: 10px 10px 25px 10px;
+    text-decoration: underline;
+    color: var(--primary_color);
+}
+.button_profile{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+}
+#btn_cancel{
+    padding: 5px 10px;
+    margin: 10px;
+    border: 1px solid var(--primary_color);
+    background-color: #ffffff;
+    color: var(--primary_color);
+    border-radius: 2px;
+}
+#btn_cancel:hover{
+    background-color: var(--primary_color);
+    color: #ffffff;
+}
+#btn_keep{
+    padding: 10px;
+    border: 1px solid var(--primary_color);
+    background-color: var(--primary_color);
+    color: #ffffff;
+    border-radius: 2px;
+}
+#btn_keep:hover{
+    background-color: #ffffff;
+    color: var(--primary_color);
+}

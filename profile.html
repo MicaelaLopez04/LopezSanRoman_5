@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil - Aerolineas Argentinas</title>
+
+    <link rel="stylesheet" href="css/style_profile.css">
+    <link rel="icon" href="images/condor.png">
+</head>
+<body>
+   
+    <div class="container">
+        <nav class="nav_profile">
+            <ul>
+                <li> <a href="#"></a> Inicio</li>
+                <li> <a href="#"></a> Perfil</li>
+                <li> <a href="#"></a> Reservas</li>
+                <li> <a href="#"></a> Buscar</li>
+            </ul>
+        </nav>
+
+        <main class="profile">
+          <header class="header_profile">
+            <div id="profile_pic">
+               <svg class="icono" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 16 16">
+                   <!-- Cabeza (blanca) -->
+                   <circle id="head" class="person-part" cx="8" cy="6" r="3" fill="white" />
+
+                   <!-- Cuerpo (blanco) un poco más abajo para separación -->
+                   <path id="body" class="person-part" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3z" fill="white"
+                     transform="translate(0,1)"
+                   />
+
+                   <!-- Borde (círculo con stroke, sin relleno) -->
+                   <circle id="border" stroke="#3c74a6" stroke-width="2" fill="none" cx="8" cy="8" r="7" />
+               </svg>
+            </div>
+
+            <div>
+              <h1>Mi Perfil</h1>
+              <a href="#">Editar foto</a> | <a href="#">Borrar foto</a>
+            </div>
+          </header>
+
+            <form class="profile_form">
+                <label>Nombre de usuario <span>*nombre de usuario ingresado✎</span></label>
+                <label>Nombre <span>*nombre ingresado ✎</span></label>
+                <label>Apellido <span>*apellido ingresado ✎</span></label>
+                <label>Email <span>*direccion de email ingresada ✎</span></label>
+                <label>Contraseña <span>*contraseña ingresada ✎</span></label>
+                <label>Fecha de nacimiento <span>*fecha ingresada ✎</span></label>
+
+                <div class="button_profile">
+                   <button type="button" id="btn_cancel">Cancelar</button>
+                   <button type="submit" id="btn_keep">Guardar cambios</button>
+                </div>
+            </form>
+
+        </main>
+    </div>
+   
+</body>
+</html>
