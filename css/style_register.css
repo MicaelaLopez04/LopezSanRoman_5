@@ -44,6 +44,14 @@ main {
         width: 70%;
         border: 1px solid var(--primary_color);
 
+        #form_datos_cuenta {
+            display: none;
+        }
+
+        #form_datos_personales {
+            /* display: none; */
+        }
+
         form {
             width: 95%;
 
@@ -53,9 +61,18 @@ main {
                 font-weight: 300;
             }
 
+            label {
+                font-size: 1em;
+            }
+
+            input {
+                width: 120%;
+                height: 2em;
+                margin: 0.5em 0em 3em 0.7em;
+            }
+
             section {
                 display: flex;
-                /* border: 1px solid black; */
                 margin-left: 2em;
 
                 article {
@@ -71,7 +88,7 @@ main {
                     border: none;
                     background: none;
                     align-self: flex-end;
-                    margin: -5em -3.7em ;
+                    margin: -5em -3.7em;
                     color: var(--primary_color);
                     cursor: pointer;
                     z-index: 2;
@@ -84,43 +101,64 @@ main {
                 }
             }
 
-            label {
-                font-size: 1em;
+            #section_name {
+                gap: 5em;
             }
 
-            input {
-                width: 120%;
-                height: 2em;
-                margin: 0.5em 0em 3em 0.7em;
+            #section_document {
+
+                select {
+                    width: 80%;
+                    height: 2.3em;
+                    margin: 0.5em 0em 3em 0.7em;
+                }
+                gap: 2em;
             }
 
-            #section_buttons {
+            .section_buttons {
                 display: flex;
                 align-items: center;
                 gap: 1em;
                 height: 4em;
-                
-                button{
+
+                button {
                     cursor: pointer;
                     font-family: var(--primary_font);
                 }
 
-                #btn_next {
+                #btn_next{
+                    width: 6em;
+                }
+                #btn_create {
+                    width: 7em;
+                }
+
+                #btn_next, #btn_create {
                     background-color: var(--primary_color);
                     color: white;
                     border: none;
-                    width: 6em;
                     height: 2em;
                     font-size: 1.3em;
 
                     &:hover {
-                        background-color: white;
-                        border: 1px solid var(--primary_color);
-                        color: var(--primary_color);
+                        background-color: var(--primary_color_opacity);
+                        border: none;
                     }
                 }
 
                 #btn_cancel {
+                    &:hover {
+                        background-color: rgb(165, 4, 4);
+                    }
+                }
+                
+                #btn_prev {
+                    &:hover {
+                        background-color: var(--primary_color_opacity);
+                    }
+                }
+
+                #btn_cancel, #btn_prev {
                     background: none;
                     border: 1px solid var(--primary_color);
                     color: var(--primary_color);
@@ -128,13 +166,10 @@ main {
                     height: 2em;
                     font-size: 0.9em;
 
-
                     &:hover {
-                        background-color: rgb(165, 4, 4);
                         color: white;
                         border: none;
                     }
-
                 }
             }
         }
