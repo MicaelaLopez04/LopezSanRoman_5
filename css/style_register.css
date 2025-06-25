@@ -3,6 +3,7 @@
     --primary_font: "Source Sans 3", sans-serif;
     --primary_color: #3C74A6;
     --primary_color_opacity: #3c75a682;
+    --color_red_cancel: rgb(165, 4, 4);
 }
 
 main {
@@ -148,7 +149,7 @@ main {
 
                 #btn_cancel {
                     &:hover {
-                        background-color: rgb(165, 4, 4);
+                        background-color: var(--color_red_cancel);
                     }
                 }
                 
