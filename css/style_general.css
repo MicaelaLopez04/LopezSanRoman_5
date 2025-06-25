@@ -1,0 +1,61 @@
+/* VARIABLES */
+:root {
+    --primary_font: "Source Sans 3", sans-serif;
+    --primary_color: #3C74A6;
+    --primary_color_opacity: #3c75a682;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid var(--primary_color);
+    height: 8vh;
+
+    div {
+        background-image: url('../images/logo.png');
+        background-size: 100%;
+        width: 20em;
+        height: 2.5em;
+        /* border: 2px solid black; */
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        width: 70em;
+        /* border: 2px solid black; */
+        height: 100%;
+
+        button {
+            width: 20%;
+            font-family: var(--primary_font);
+            color: var(--primary_color);
+            font-size: 1.4em;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.5s;
+
+            &:hover {
+                background-color: var(--primary_color_opacity);
+                color: white;
+                border-bottom: 5px solid var(--primary_color);
+            }
+        }
+
+        #btn_miperfil {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+        }
+
+        #btn_questions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em;
+            gap: 0.5em;
+        }
+    }
+}
