@@ -1,0 +1,408 @@
+/* VARIABLES */
+:root {
+    --primary_font: "Source Sans 3", sans-serif;
+    --primary_color: #3c74a6;
+    --primary_color_opacity: #3c75a682;
+    --color_red_cancel: #a50404;
+    --border-radius: 0.125em;
+}
+
+main {
+    font-family: var(--primary_font);
+
+    #img_index {
+        background: url('../images/BH_Oscuro_DESTACADA.jpg');
+        width: 100%;
+        height: 100vh;
+        background-size: 100%;
+    }
+
+    #div_form {
+        position: absolute;
+        top: 32em;
+        left: 6em;
+        background-color: white;
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.483);
+        width: 85%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            width: 100%;
+
+            .search_form>*:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            .form_radio {
+                display: flex;
+                margin: 1em 1em;
+                gap: 3em;
+
+                label {
+                    display: flex;
+                    gap: 0.6em;
+                    font-size: 1.4em;
+                    margin: 0em;
+                }
+            }
+
+            input[type="radio"] {
+                accent-color: var(--primary_color);
+                margin: 0em;
+            }
+
+            .form_border {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                gap: 1.5em;
+                margin: 1.5em 0em;
+
+                .div_campo {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                label {
+                    font-size: 1.2em;
+                }
+
+                input,
+                #toggle_clase_pasajeros {
+                    height: 2.5em;
+                    border-radius: var(--border-radius);
+                    border: 1px solid #000000;
+                }
+
+                #origin,
+                #destiny {
+                    width: 17em;
+                }
+
+                #fecha_ida,
+                #fecha_vuelta {
+                    width: 12em;
+                }
+            }
+        }
+
+        .button_search {
+            display: flex;
+            align-items: center;
+            padding: 1em;
+            gap: 1em;
+        }
+
+        #btn_cancel {
+            background: none;
+            border: 1px solid var(--primary_color);
+            color: var(--primary_color);
+            width: 6em;
+            height: 2em;
+            font-size: 0.8em;
+            border-radius: 2px;
+
+            &:hover {
+                background-color: var(--color_red_cancel);
+                color: white;
+                border: none;
+            }
+        }
+
+        #btn_search_vuelo {
+            width: 9em;
+            height: 2.5em;
+            background-color: var(--primary_color);
+            border: none;
+            color: white;
+            border-radius: 2px;
+            font-size: 1em;
+
+            &:hover {
+                background-color: var(--primary_color_opacity);
+                border: none;
+            }
+        }
+    }
+
+    #section_content {
+        margin-top: 6em;
+        display: flex;
+        justify-content: space-evenly;
+
+        .article_add {
+            width: 10em;
+            height: 100vh;
+        }
+
+        #add1 {
+            background: url('../images/add_vertical1.png');
+            background-size: 100%;
+        }
+
+        #add2 {
+            background: url('../images/add_vertical2.png');
+            background-size: 100%;
+        }
+
+        #article_content {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                font-weight: 400;
+                font-style: italic;
+                color: rgb(57, 57, 57);
+            }
+
+            #carrusel_desc {
+                width: 90%;
+                height: 16em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2em;
+                background-color: var(--primary_color_opacity);
+                border-radius: var(--border-radius);
+
+                .section_desc {
+                    width: 45%;
+                    height: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                    border-radius: var(--border-radius);
+                }
+
+                .img_desc {
+                    width: 18em;
+                    height: 8em;
+                }
+
+                #desc_uno {
+                    background: url('../images/BH_CUN_DESKTOP.jpg');
+                    background-size: 100%;
+                }
+
+                #desc_dos {
+                    background: url('../images/BH_MIA_DESKTOP.jpg');
+                    background-size: 100%;
+                }
+
+                .about_desc {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-around;
+
+                    h4 {
+                        margin: 1em 0em 0em;
+                    }
+                }
+            }
+
+            #inputs_carrusel {
+                display: flex;
+                gap: 0.5em;
+                margin: 1em 0em;
+
+                input[type="radio"] {
+                    accent-color: var(--primary_color);
+                    margin: 0em;
+                }
+            }
+
+            #article_tarjetas {
+                width: 80%;
+                height: 30%;
+                display: flex;
+                flex-direction: column;
+
+                section {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1em;
+                    margin: 1em 0em;
+                }
+
+                div {
+                    border: 1px solid rgba(0, 0, 0, 0.200);
+                    border-radius: var(--border-radius);
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+                    width: 12em;
+                    height: 6em;
+                    cursor: pointer;
+                    transition: scale 0.5s;
+
+                    &:hover {
+                        scale: 110%;
+                    }
+                }
+
+                #galicia {
+                    background: url('../images/galicia.png');
+                    background-size: 80% 60%;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                }
+
+                #santander {
+                    background: url('../images/santander.png');
+                    background-size: 80% 45%;
+                    background-repeat: no-repeat;
+                    background-position: 55%;
+                }
+
+                #naranjax {
+                    background: url('../images/naranja.png');
+                    background-size: 80% 60%;
+                    background-repeat: no-repeat;
+                    background-position: 60%;
+                }
+
+                #bbva {
+                    background: url('../images/bbva.png');
+                    background-size: 60% 40%;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                }
+
+                #bna {
+                    background: url('../images/bna.png');
+                    background-size: 60% 60%;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 4em;
+    height: 40vh;
+    font-family: var(--primary_font);
+    color: white;
+
+    h3,
+    h4 {
+        font-weight: 400;
+        margin: 0em;
+    }
+
+    #section_social {
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        background-color: #9B9B9B;
+
+        button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-right: 1em;
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.800);
+            }
+        }
+    }
+
+    #section_legal {
+        height: 25vh;
+        background-color: #d2d0d0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+#toggle_clase_pasajeros {
+    color: #808080;
+}
+
+.selector_clase_pasajeros {
+    position: relative;
+    width: 13em;
+}
+
+.selector_clase_pasajeros .selector_toggle {
+    position: relative;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.selector_toggle .flecha {
+    position: absolute;
+    right: 12px;
+    /* ajustá según necesidad */
+    pointer-events: none;
+}
+
+.selector_clase_pasajeros .selector_menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.selector_clase_pasajeros.abierto .selector_menu {
+    display: flex;
+}
+
+.selector_clase_pasajeros .opcion_clase {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selector_clase_pasajeros .grupo_pasajero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.selector_clase_pasajeros .grupo_pasajero input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.selector_clase_pasajeros .grupo_pasajero button {
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+}
