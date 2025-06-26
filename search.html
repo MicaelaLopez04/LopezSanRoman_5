@@ -5,30 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Vuelos - Aerolineas Argentinas</title>
-
     <link rel="stylesheet" href="css/style_search.css">
     <link rel="icon" href="images/condor.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <body>
-
         <div class="container">
             <nav class="nav_search">
                 <ul>
-                    <li> <a href="#"></a> Inicio</li>
-                    <li> <a href="#"></a> Perfil</li>
-                    <li> <a href="#"></a> Reservas</li>
-                    <li> <a href="#"></a> Buscar</li>
+                    <li id="link_index">Inicio</li>
+                    <li id="link_profile">Perfil</li>
+                    <li id="link_reservations">Reservas</li>
+                    <li id="link_search">Buscar</li>
                 </ul>
             </nav>
 
-            <main class="search">
-                <header class="header_search">
-                    <h1>Buscar Vuelos</h1>
-                </header>
+            <header class="header_search">
+                <h1>Buscar Vuelos</h1>
+            </header>
 
+            <main class="search">
                 <form class="search_form">
                     <div class="form_radio">
                         <label><input type="radio" name="tipo_viaje" value="ida" checked>Ida</label>
@@ -103,13 +106,15 @@
 
 
                     </div>
-                    <div class="button_search">
-                        <button type="button" id="btn_cancel">Cancelar</button>
-                        <button type="submit" id="btn_search">Buscar Vuelos</button>
-                    </div>
                 </form>
+                <div class="button_search">
+                    <button type="button" id="btn_cancel">Cancelar</button>
+                    <button type="submit" id="btn_search">Buscar Vuelos</button>
+                </div>
             </main>
         </div>
+
+        <script src="js/navs_private.js"></script>
         <script src="js/search.js"></script>
     </body>
 
