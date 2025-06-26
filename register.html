@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear cuenta - Aerolineas Argentinas</title>
     <link rel="stylesheet" href="css/style_register.css">
-    <link rel="stylesheet" href="css/style_general.css">
+    <link rel="stylesheet" href="css/style_nav_public.css">
     <link rel="icon" href="images/condor.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +34,15 @@
                         d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                 </svg> Mi perfil</button>
         </nav>
+        <nav id="nav_mobile">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
+        </nav>
     </header>
 
     <main>
@@ -53,12 +62,13 @@
                     <article>
                         <label for="">Password</label>
                         <input type="password" name="password" id="pass_input" placeholder="Ingrese una contraseña">
-                        <button type="button" id="btn_pass"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" id="icon_eye" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
-                            <path
-                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
-                        </svg></button>
+                        <button type="button" id="btn_pass"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" fill="currentColor" id="icon_eye" class="bi bi-eye-fill"
+                                viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                <path
+                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                            </svg></button>
                     </article>
                 </section>
 
@@ -76,7 +86,7 @@
             </form>
 
             <form id="form_datos_personales" action="">
-                 <h2>Datos personales</h2>
+                <h2>Datos personales</h2>
 
                 <section id="section_name">
                     <article>
@@ -88,7 +98,7 @@
                         <input type="text" name="apellido" placeholder="Ingrese su apellido">
                     </article>
                     <article>
-                        <label for="">Dia  de nacimiento</label>
+                        <label for="">Dia de nacimiento</label>
                         <input type="date" name="date">
                     </article>
                 </section>
@@ -104,6 +114,25 @@
                     <article id="article_number">
                         <label for="">Numero de documento</label>
                         <input type="number" name="document" placeholder="Ingrese su numero de documento">
+                    </article>
+                </section>
+
+                <section id="section_document_mobile">
+                    <article id="article_document_mobile">
+                        <section>
+                            <label for="">Document</label>
+                        </section>
+                        <section>
+                            <article id="article_type">
+                                <select name="type" id="" value="Selecciona">
+                                    <option value="dni">DNI</option>
+                                    <option value="pasaporte">PASAPORTE</option>
+                                </select>
+                            </article>
+                            <article id="article_number">
+                                <input type="number" name="document" placeholder="Ingrese su numero de documento">
+                            </article>
+                        </section>
                     </article>
                 </section>
 

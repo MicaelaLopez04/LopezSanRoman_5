@@ -103,6 +103,10 @@ main {
                 gap: 5em;
             }
 
+            #section_document_mobile{
+                display: none;
+            }
+
             #section_document {
 
                 select {
@@ -110,6 +114,7 @@ main {
                     height: 2.3em;
                     margin: 0.5em 0em 3em 0.7em;
                 }
+
                 gap: 2em;
             }
 
@@ -125,14 +130,16 @@ main {
                     border-radius: var(--border-radius);
                 }
 
-                #btn_next{
+                #btn_next {
                     width: 6em;
                 }
+
                 #btn_create {
                     width: 7em;
                 }
 
-                #btn_next, #btn_create {
+                #btn_next,
+                #btn_create {
                     background-color: var(--primary_color);
                     color: white;
                     border: none;
@@ -150,14 +157,15 @@ main {
                         background-color: var(--color_red_cancel);
                     }
                 }
-                
+
                 #btn_prev {
                     &:hover {
                         background-color: var(--primary_color_opacity);
                     }
                 }
 
-                #btn_cancel, #btn_prev {
+                #btn_cancel,
+                #btn_prev {
                     background: none;
                     border: 1px solid var(--primary_color);
                     color: var(--primary_color);
@@ -181,7 +189,130 @@ main {
             height: 20em;
             background: url('../images/avion_register.png');
             background-size: 100%;
+        }
+    }
+}
 
+/* MEDIA QUERIES PARA MOBILE */
+@media (max-width:600px) {
+
+    main {
+        flex-direction: column;
+        gap: 0em;
+        height: 100%;
+
+        #section_title {
+            margin: 1.5em 0em;
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h4 {
+                font-size: 0.7em;
+            }
+        }
+
+        #section_form {
+            height: 100%;
+            width: 90%;
+
+            form {
+                height: 85%;
+
+                h2 {
+                    font-size: 1.5em;
+                    margin: 0.5em;
+                }
+
+                label {
+                    font-size: 1em;
+                }
+
+                #section_user_pass,
+                #section_email {
+
+                    input {
+                        width: 85%;
+                    }
+                }
+
+                section {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 0em;
+
+                    article {
+                        width: 90%;
+                    }
+                }
+
+                #section_user_pass {
+                    flex-direction: column;
+                    gap: 0em;
+
+                    #btn_pass {
+                        position: absolute;
+                        right: 6.5em;
+                        top: 28em;
+                        margin: 0em;
+                    }
+                }
+
+                #section_name {
+                    flex-direction: column;
+                    gap: 0em;
+
+                    input {
+                        width: 85%;
+                    }
+                }
+
+                #section_document{
+                    display:none;
+                }
+
+                #section_document_mobile {
+                    display: flex;
+
+                    select {
+                        width: 70%;
+                        height: 2.3em;
+                        margin: 0.5em 0em 3em 0.7em;
+                    }
+
+                    input {
+                        width: 90%;
+                    }
+
+                    #article_document_mobile {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 0.5em;
+                    }
+
+                    #article_type {
+                        width: 40%;
+                    }
+                }
+
+                .section_buttons {
+                    flex-direction: row-reverse;
+                    justify-content: end;
+                }
+            }
+
+            #img {
+                position: absolute;
+                right: -2em;
+                top: 4em;
+                width: 10em;
+                height: 8em;
+                background: url('../images/avion_register.png');
+                background-size: 100%;
+            }
         }
     }
 }
