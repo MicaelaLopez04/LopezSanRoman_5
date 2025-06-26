@@ -101,17 +101,10 @@ main {
         .btn {
             display: flex;
             padding: 0;
-<<<<<<< HEAD
-            justify-content: flex-end;
-            width: 100%;
-            padding-right: 2.5em;
-            gap: 0.625em;
-=======
             gap: 0.5em;
             justify-content: center;
             align-items: center;
             width: 100%;
->>>>>>> fb3e067bd6b1de3b5d2af5b9e4828628964e1252
 
             #btn_aplicar {
                 padding: 0.6em 1.5em;
@@ -143,10 +136,6 @@ main {
                 border: 1px solid var(--primary_color);
                 color: var(--primary_color);
                 font-size: 1.3em;
-<<<<<<< HEAD
-                margin: 0.625em;
-=======
->>>>>>> fb3e067bd6b1de3b5d2af5b9e4828628964e1252
 
                 &:hover {
                     background-color: var(--color_red_cancel);
@@ -157,37 +146,6 @@ main {
         }
     }
 
-<<<<<<< HEAD
-    .filtros_mobile {
-        display: none;
-        flex-direction: column;
-        gap: 0.5em;
-        padding: 1em;
-        font-family: var(--primary_font);
-    }
-
-    .filtros_mobile button {
-        padding: 0.5em;
-        font-size: 1em;
-        background-color: var(--primary_color);
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 0.25em;
-    }
-
-    .filtros_mobile select {
-        width: 100%;
-        padding: 0.4em;
-        font-size: 0.9em;
-        margin-bottom: 0.5em;
-        border: 1px solid #ccc;
-        border-radius: 0.25em;
-        color: #555;
-    }
-
-=======
->>>>>>> fb3e067bd6b1de3b5d2af5b9e4828628964e1252
     .div_ticket {
         display: flex;
         align-items: center;
@@ -287,19 +245,6 @@ main {
         &:hover {
             background-color: var(--primary_color_opacity);
         }
-<<<<<<< HEAD
-
-        .simbolo_peso {
-            width: 1.6em;
-            height: 2em;
-            vertical-align: middle;
-        }
-
-        .texto_aplicar {
-            display: inline;
-        }
-=======
->>>>>>> fb3e067bd6b1de3b5d2af5b9e4828628964e1252
     }
 
     button {

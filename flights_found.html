@@ -26,21 +26,9 @@
             </ul>
         </nav>
 
-        <header> 
+        <header>
             <h1>Buscar Vuelos</h1>
-            <button id="btn_hamburguesa" aria-label="Menú">☰</button>
         </header>
-
-         <nav class="nav_flight" id="menu_nav">
-            <ul>
-                <li id="link_index">Inicio</li>
-                <li id="link_profile">Perfil</li>
-                <li id="link_reservations">Reservas</li>
-                <li id="link_search">Buscar</li>
-            </ul>
-        </nav>
-
-
         <main>
             <div class="filtros">
                 <label for="escala">Filtrar </label>
@@ -87,142 +75,6 @@
                     </button>
                 </div>
             </div>
-
-            <div class="filtros_mobile">
-                <button id="btn_filtrar">Filtrar ▼</button>
-                <div id="contenedor_filtros" style="display: none;">
-                    <button class="btn_toggle" data-target="select_escala">Escalas</button>
-                    <select id="select_escala" style="display: none;">
-                        <option disabled selected>Escalas</option>
-                        <option value="e1">1 escala</option>
-                        <option value="e2">2 escalas</option>
-                        <option value="e3">3 escalas</option>
-                        <option value="e4">4 escalas</option>
-                        <option value="e5">5 escalas</option>
-                        <option value="e6">6 escalas</option>
-                    </select>
-
-                    <button class="btn_toggle" data-target="select_horario">Horarios de salida</button>
-                    <select id="select_horario" style="display: none;">
-                        <option disabled selected>Horarios de salida</option>
-                        <option value="h1">07:30am</option>
-                        <option value="h2">09:00am</option>
-                        <option value="h3">11:15am</option>
-                        <option value="h4">18:45pm</option>
-                        <option value="h5">20:00pm</option>
-                        <option value="h6">22:30pm</option>
-                    </select>
-
-                    <button class="btn_toggle" data-target="select_duracion">Duración del viaje</button>
-                    <select id="select_duracion" style="display: none;">
-                        <option disabled selected>Duración del viaje</option>
-                        <option value="d1">8 horas</option>
-                        <option value="d2">12 horas</option>
-                        <option value="d3">15 horas</option>
-                        <option value="d4">18 horas</option>
-                    </select>
-
-                    <button class="btn_toggle" data-target="select_precio">Precio</button>
-                    <select id="select_precio" style="display: none;">
-                        <option disabled selected>Precio</option>
-                        <option value="p1">Entre $300.000 y $550.000</option>
-                        <option value="p2">Entre $550.050 y $700.000</option>
-                        <option value="p3">Entre $700.050 y $900.000</option>
-                        <option value="p4">Más de $900.000</option>
-                    </select>
-                </div>
-                <div class="btn">
-                    <button type="button" id="btn_aplicar">Aplicar</button>
-                    <button type="button" id="btn_borrar"> <svg class="icono_basura" xmlns="http://www.w3.org/2000/svg"
-                            width="64" height="64" viewBox="0 0 64 64" fill="none">
-                            <!-- Cuerpo principal (color principal) -->
-                            <rect x="20" y="20" width="24" height="36" rx="2" ry="2" fill="#3c74a6" />
-
-                            <!-- Tapa (más oscuro para contraste) -->
-                            <rect x="18" y="18" width="28" height="4" rx="1" ry="1" fill="#2b5680" />
-
-                            <!-- Líneas verticales (más claro) -->
-                            <rect x="24" y="24" width="2" height="28" fill="#7fa9d4" />
-                            <rect x="31" y="24" width="2" height="28" fill="#7fa9d4" />
-                            <rect x="38" y="24" width="2" height="28" fill="#7fa9d4" />
-
-                            <!-- Parte superior oscura -->
-                            <path d="M22 16h20l-1-4h-18l-1 4z" fill="#2b5680" />
-
-                            <!-- Manija o detalle superior -->
-                            <rect x="26" y="10" width="12" height="2" rx="1" fill="#1f3e5a" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div class="filtros_mobile">
-                <button id="btn_filtrar">Filtrar ▼</button>
-                <div id="contenedor_filtros" style="display: none;">
-                    <button class="btn_toggle" data-target="select_escala">Escalas</button>
-                    <select id="select_escala" style="display: none;">
-                        <option disabled selected>Escalas</option>
-                        <option value="e1">1 escala</option>
-                        <option value="e2">2 escalas</option>
-                        <option value="e3">3 escalas</option>
-                        <option value="e4">4 escalas</option>
-                        <option value="e5">5 escalas</option>
-                        <option value="e6">6 escalas</option>
-                    </select>
-
-                    <button class="btn_toggle" data-target="select_horario">Horarios de salida</button>
-                    <select id="select_horario" style="display: none;">
-                        <option disabled selected>Horarios de salida</option>
-                        <option value="h1">07:30am</option>
-                        <option value="h2">09:00am</option>
-                        <option value="h3">11:15am</option>
-                        <option value="h4">18:45pm</option>
-                        <option value="h5">20:00pm</option>
-                        <option value="h6">22:30pm</option>
-                    </select>
-
-                    <button class="btn_toggle" data-target="select_duracion">Duración del viaje</button>
-                    <select id="select_duracion" style="display: none;">
-                        <option disabled selected>Duración del viaje</option>
-                        <option value="d1">8 horas</option>
-                        <option value="d2">12 horas</option>
-                        <option value="d3">15 horas</option>
-                        <option value="d4">18 horas</option>
-                    </select>
-
-                    <button class="btn_toggle" data-target="select_precio">Precio</button>
-                    <select id="select_precio" style="display: none;">
-                        <option disabled selected>Precio</option>
-                        <option value="p1">Entre $300.000 y $550.000</option>
-                        <option value="p2">Entre $550.050 y $700.000</option>
-                        <option value="p3">Entre $700.050 y $900.000</option>
-                        <option value="p4">Más de $900.000</option>
-                    </select>
-                </div>
-                <div class="btn">
-                    <button type="button" id="btn_aplicar">Aplicar</button>
-                    <button type="button" id="btn_borrar"> <svg class="icono_basura" xmlns="http://www.w3.org/2000/svg"
-                            width="64" height="64" viewBox="0 0 64 64" fill="none">
-                            <!-- Cuerpo principal (color principal) -->
-                            <rect x="20" y="20" width="24" height="36" rx="2" ry="2" fill="#3c74a6" />
-
-                            <!-- Tapa (más oscuro para contraste) -->
-                            <rect x="18" y="18" width="28" height="4" rx="1" ry="1" fill="#2b5680" />
-
-                            <!-- Líneas verticales (más claro) -->
-                            <rect x="24" y="24" width="2" height="28" fill="#7fa9d4" />
-                            <rect x="31" y="24" width="2" height="28" fill="#7fa9d4" />
-                            <rect x="38" y="24" width="2" height="28" fill="#7fa9d4" />
-
-                            <!-- Parte superior oscura -->
-                            <path d="M22 16h20l-1-4h-18l-1 4z" fill="#2b5680" />
-
-                            <!-- Manija o detalle superior -->
-                            <rect x="26" y="10" width="12" height="2" rx="1" fill="#1f3e5a" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
             <div class="div_ticket">
                 <section class="ticket_avion">
                     <article class="article_salida">
@@ -257,192 +109,102 @@
                     </article>
                 </section>
                 <button class="btn_generar_compra">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
-                        <path
-                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
-                    </svg>
-                    <span class="texto_aplicar">Generar compra</span>
-                </button>
-            </div>
-            <div class="div_ticket">
-                <section class="ticket_avion">
-                    <article class="article_salida">
-                        <h5>JUEVES</h5>
-                        <h5>22:35</h5>
-                        <h4>EZE</h4>
-                    </article>
-                    <article class="article_trayecto">
-                        <article>
-                            <h5>19h 23m</h5>
-                        </article>
-                        <article>
-                            <div class="line"></div>
-                            <svg cxmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="icon_avion" viewBox="0 0 16 16">
-                                <path
-                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849" />
-                            </svg>
-                        </article>
-                        <article>
-                            <h4>2 escalas</h4>
-                        </article>
-                    </article>
-                    <article class="article_llegada">
-                        <h5>VIERNES</h5>
-                        <h5>20:30</h5>
-                        <h4>BCN</h4>
-                    </article>
-                    <article class="precio_contenedor">
-                        <div class="linea_vertical"></div>
-                        <div class="precio">$ 1.900.050 ARS</div>
-                    </article>
-                </section>
-                <button class="btn_generar_compra">
-                    <svg class="simbolo_peso" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="24"
-                            font-family="Arial, sans-serif" font-weight="bold" fill="currentColor">
-                            $
-                        </text>
-                    </svg>
-                    <span class="texto_aplicar">Generar compra</span>
-                </button>
-            </div>
-            <div class="div_ticket">
-                <section class="ticket_avion">
-                    <article class="article_salida">
-                        <h5>JUEVES</h5>
-                        <h5>22:35</h5>
-                        <h4>EZE</h4>
-                    </article>
-                    <article class="article_trayecto">
-                        <article>
-                            <h5>19h 23m</h5>
-                        </article>
-                        <article>
-                            <div class="line"></div>
-<<<<<<< Updated upstream
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-=======
-                            <svg cxmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
->>>>>>> Stashed changes
-                                class="icon_avion" viewBox="0 0 16 16">
-                                <path
-                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849" />
-                            </svg>
-                        </article>
-                        <article>
-                            <h4>2 escalas</h4>
-                        </article>
-                    </article>
-                    <article class="article_llegada">
-                        <h5>VIERNES</h5>
-                        <h5>20:30</h5>
-                        <h4>BCN</h4>
-                    </article>
-                    <article class="precio_contenedor">
-                        <div class="linea_vertical"></div>
-                        <div class="precio">$ 1.900.050 ARS</div>
-                    </article>
-                </section>
-                <button class="btn_generar_compra">
-<<<<<<< Updated upstream
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
-                        <path
-                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
-                    </svg>
-<<<<<<< Updated upstream
-                    Generar compra
-=======
-                    <svg class="simbolo_peso" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="24"
-                            font-family="Arial, sans-serif" font-weight="bold" fill="currentColor">
-                            $
-                        </text>
-                    </svg>
-                    <span class="texto_aplicar">Generar compra</span>
->>>>>>> Stashed changes
-                </button>
-            </div>
-            <div class="div_ticket">
-                <section class="ticket_avion">
-                    <article class="article_salida">
-                        <h5>JUEVES</h5>
-                        <h5>22:35</h5>
-                        <h4>EZE</h4>
-                    </article>
-                    <article class="article_trayecto">
-                        <article>
-                            <h5>19h 23m</h5>
-                        </article>
-                        <article>
-                            <div class="line"></div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="icon_avion" viewBox="0 0 16 16">
-                                <path
-                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849" />
-                            </svg>
-                        </article>
-                        <article>
-                            <h4>2 escalas</h4>
-                        </article>
-                    </article>
-                    <article class="article_llegada">
-                        <h5>VIERNES</h5>
-                        <h5>20:30</h5>
-                        <h4>BCN</h4>
-                    </article>
-                    <article class="precio_contenedor">
-                        <div class="linea_vertical"></div>
-                        <div class="precio">$ 1.900.050 ARS</div>
-                    </article>
-                </section>
-                <button class="btn_generar_compra">
-<<<<<<< Updated upstream
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                         class="bi bi-currency-dollar" viewBox="0 0 16 16">
                         <path
                             d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
                     </svg>
                     Generar compra
-=======
-                    <span class="texto_aplicar">Generar compra</span>
->>>>>>> Stashed changes
-=======
-                    <svg class="simbolo_peso" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="24"
-                            font-family="Arial, sans-serif" font-weight="bold" fill="currentColor">
-                            $
-                        </text>
+                </button>
+            </div>
+            <div class="div_ticket">
+                <section class="ticket_avion">
+                    <article class="article_salida">
+                        <h5>JUEVES</h5>
+                        <h5>22:35</h5>
+                        <h4>EZE</h4>
+                    </article>
+                    <article class="article_trayecto">
+                        <article>
+                            <h5>19h 23m</h5>
+                        </article>
+                        <article>
+                            <div class="line"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="icon_avion" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849" />
+                            </svg>
+                        </article>
+                        <article>
+                            <h4>2 escalas</h4>
+                        </article>
+                    </article>
+                    <article class="article_llegada">
+                        <h5>VIERNES</h5>
+                        <h5>20:30</h5>
+                        <h4>BCN</h4>
+                    </article>
+                    <article class="precio_contenedor">
+                        <div class="linea_vertical"></div>
+                        <div class="precio">$ 1.900.050 ARS</div>
+                    </article>
+                </section>
+                <button class="btn_generar_compra">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
                     </svg>
-                    <span class="texto_aplicar">Generar compra</span>
->>>>>>> Stashed changes
+                    Generar compra
+                </button>
+            </div>
+            <div class="div_ticket">
+                <section class="ticket_avion">
+                    <article class="article_salida">
+                        <h5>JUEVES</h5>
+                        <h5>22:35</h5>
+                        <h4>EZE</h4>
+                    </article>
+                    <article class="article_trayecto">
+                        <article>
+                            <h5>19h 23m</h5>
+                        </article>
+                        <article>
+                            <div class="line"></div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="icon_avion" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849" />
+                            </svg>
+                        </article>
+                        <article>
+                            <h4>2 escalas</h4>
+                        </article>
+                    </article>
+                    <article class="article_llegada">
+                        <h5>VIERNES</h5>
+                        <h5>20:30</h5>
+                        <h4>BCN</h4>
+                    </article>
+                    <article class="precio_contenedor">
+                        <div class="linea_vertical"></div>
+                        <div class="precio">$ 1.900.050 ARS</div>
+                    </article>
+                </section>
+                <button class="btn_generar_compra">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                        <path
+                            d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
+                    </svg>
+                    Generar compra
                 </button>
             </div>
         </main>
+
     </div>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     <script src="js/navs_private.js"></script>
-=======
-=======
->>>>>>> Stashed changes
-
-
-    <script>
-        document.getElementById('btn_hamburguesa').addEventListener('click', () => {
-  document.getElementById('menu_nav').classList.toggle('mostrar');
-});
-
-    </script>
-
-    <script src="js/navs_private.js"></script>
-    <script src="js/comportamiento_nav.js"></script>
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 </body>
 
 </html>
