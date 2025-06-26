@@ -101,10 +101,10 @@ main {
         .btn {
             display: flex;
             padding: 0;
-            gap: 0.5em;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-end;
             width: 100%;
+            padding-right: 2.5em;
+            gap: 0.625em;
 
             #btn_aplicar {
                 padding: 0.6em 1.5em;
@@ -130,20 +130,55 @@ main {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 1.8em;
-                height: 1.8em;
+                width: 2.5em;
+                height: 1.4em;
+                padding: 0.5em;
                 background-color: white;
-                border: 1px solid var(--primary_color);
+                border: 0.1em solid var(--primary_color);
                 color: var(--primary_color);
                 font-size: 1.3em;
+                margin: 0.625em;
 
                 &:hover {
-                    background-color: var(--color_red_cancel);
-                    color: white;
+                    background-color: var(--primary_color_opacity);
                     border: none;
+                }
+
+                .icono_basura {
+                    width: 1.3em;
+                    height: 1.3em;
+                    color: var(--primary_color);
                 }
             }
         }
+    }
+
+    .filtros_mobile {
+        display: none;
+        flex-direction: column;
+        gap: 0.5em;
+        padding: 1em;
+        font-family: var(--primary_font);
+    }
+
+    .filtros_mobile button {
+        padding: 0.5em;
+        font-size: 1em;
+        background-color: var(--primary_color);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 0.25em;
+    }
+
+    .filtros_mobile select {
+        width: 100%;
+        padding: 0.4em;
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+        border: 1px solid #ccc;
+        border-radius: 0.25em;
+        color: #555;
     }
 
     .div_ticket {
@@ -168,7 +203,7 @@ main {
             h4,
             h5 {
                 margin: 0.3em 0;
-                font-size: 1em;
+                font-size: 1.5em;
             }
 
             h5 {
@@ -245,6 +280,16 @@ main {
         &:hover {
             background-color: var(--primary_color_opacity);
         }
+
+        .simbolo_peso {
+            width: 1.6em;
+            height: 2em;
+            vertical-align: middle;
+        }
+
+        .texto_aplicar {
+            display: inline;
+        }
     }
 
     button {
@@ -253,7 +298,6 @@ main {
     }
 }
 
-
 @media (max-width: 767px) {
     .container {
         display: flex;
@@ -261,290 +305,220 @@ main {
         height: 100vh;
     }
 
-    /* DESKTOP */
     .nav_flight {
-        grid-area: nav;
-        padding: 1.8em 0em 1.2em 0em;
-        border-right: 0.5em solid var(--primary_color_opacity);
+        display: none;
+        border: none;
+        padding: 0.5em 1em;
+        width: 100%;
+        background-color: white;
     }
 
     .nav_flight ul {
-        list-style: none;
-        padding: 0;
+        flex-direction: column;
+        gap: 0.5em;
     }
 
     .nav_flight li {
-        display: flex;
+        font-size: 1.2em;
+        padding-left: 1em;
+        height: 2.5em;
+
         align-items: center;
-        padding-left: 0.5em;
-        height: 3.2em;
-        color: var(--primary_color);
-        font-size: 1.56em;
-        cursor: pointer;
+
     }
 
-    .nav_flight li:hover {
-        color: #ffffff;
-        background-color: var(--primary_color_opacity);
-        border-left: 0.3125em solid var(--primary_color);
-    }
-
-    #link_search {
-        color: #ffffff;
-        background-color: var(--primary_color_opacity);
-        border-left: 0.3125em solid var(--primary_color);
-    }
-
-    header {
-        grid-area: header;
-        display: flex;
-        align-items: center;
-        border-bottom: 0.25em solid var(--primary_color);
-    }
-
-    header h1 {
-        font-family: var(--primary_font);
-        font-size: 3.5em;
-        font-weight: 400;
-        color: var(--primary_color);
-        margin: 0em 0.5em;
+    #menu_nav.mostrar {
+        display: block;
     }
 
     #btn_hamburguesa {
-        display: none;
+        display: block;
+        font-size: 2em;
+        background: none;
+        border: none;
+        color: var(--primary_color);
+        cursor: pointer;
+        padding: 0.5em 1em;
+    }
 
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5em 1em;
+    }
+
+    header h1 {
+        font-size: 2em;
+        margin: 0;
     }
 
 
+main {
+    grid-area: unset;
+    padding: 1em;
+    overflow-y: auto;
+
+    .filtros {
+        display: none !important;
 
 
+    }
 
+    .filtros_mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1em;
+        flex-wrap: nowrap;
 
-
-
-
-
-
-
-
-    @media (max-width: 767px) {
-        .container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
-
-        .nav_flight {
-            display: none;
-            border: none;
-            padding: 0.5em 1em;
-            width: 100%;
+        #btn_filtrar,
+        .btn_toggle,
+        select {
+            font-size: 0.8em;
+            padding: 0.3em 0.5em;
             background-color: white;
+            color: var(--primary_color);
+            border: 0.06em solid var(--primary_color);
         }
 
-        .nav_flight ul {
+        #contenedor_filtros {
+            display: flex;
             flex-direction: column;
             gap: 0.5em;
         }
 
-        .nav_flight li {
-            font-size: 1.2em;
-            padding-left: 1em;
-            height: 2.5em;
+        .btn {
+            display: flex;
+            justify-content: flex-end;
+            width: auto;
+            gap: 0.5em;
+            background-color: white;
+            padding-right: 0;
 
-            align-items: center;
 
-        }
+            #btn_aplicar {
+                font-size: 1em;
+                padding: 0.4em 1em;
 
-        #menu_nav.mostrar {
-            display: block;
-        }
+                &:hover {
+                    background-color: var(--primary_color_opacity);
+                    border: none;
+                }
 
-        #btn_hamburguesa {
-            display: block;
-            font-size: 2em;
-            background: none;
-            border: none;
-            color: var(--primary_color);
-            cursor: pointer;
-            padding: 0.5em 1em;
-        }
+            }
 
-        header {
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 0.5em 1em;
-        }
+            #btn_borrar {
+                display: flex;              /* activa flexbox */
+                align-items: center;        /* centra verticalmente */
+                justify-content: center; 
+                width: 2em;
+                height: 2em;
+                font-size: 1em;
+                margin: 0.4em;
+                background-color: white;
+                border: 0.1em solid var(--primary_color);
+                color: var(--primary_color);
 
-        header h1 {
-            font-size: 2em;
-            margin: 0;
+                &:hover {
+                    background-color: var(--color_red_cancel);
+                    color: white;
+                    border: none;
+                }
+
+                .icono_basura {
+                    width: 2em;
+                    height: 2em;
+                    color: var(--primary_color);
+                }
+            }
         }
     }
 
-    main {
-        grid-area: unset;
-        padding: 1em;
-        overflow-y: auto;
 
-        .filtros {
-            display: none !important;
+    .div_ticket {
+        gap: 1.5em;
+    }
 
+    .ticket_avion {
+        width: 70%;
+        height: 60%;
+        padding: 0.4em 0.7em;
+        gap: 0.3em;
+        font-size: 0.55em;
 
-        }
+        article {
 
-        .filtros_mobile {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 1em;
-            flex-wrap: nowrap;
+            padding: 1em auto;
 
-            #btn_filtrar,
-            .btn_toggle,
-            select {
-                font-size: 0.8em;
-                padding: 0.3em 0.5em;
-                background-color: white;
-                color: var(--primary_color);
-                border: 0.06em solid var(--primary_color);
-            }
-
-            #contenedor_filtros {
-                display: flex;
-                flex-direction: column;
-                gap: 0.5em;
-            }
-
-            .btn {
-                display: flex;
-                justify-content: flex-end;
-                width: auto;
-                gap: 0.5em;
-                background-color: white;
-                padding-right: 0;
-                
-
-                #btn_aplicar {
-                    font-size: 1em;
-                    padding: 0.4em 1em;
-
-                    &:hover {
-                        background-color: var(--primary_color_opacity);
-                        border: none;
-                    }
-
-                }
-
-                #btn_borrar {
-                    width: 2em;
-                    height: 2em;
-                    font-size: 1em;
-                    margin: 0.4em;
-                    background-color: white;
-                    border: 0.1em solid var(--primary_color);
-                    color: var(--primary_color);
-
-                    &:hover {
-                        background-color: var(--color_red_cancel);
-                        color: white;
-                        border: none;
-                    }
-
-                    .icono_basura {
-                        width: 1.5em;
-                        height: 1.5em;
-                        color: var(--primary_color);
-                    }
-                }
-            }
-        }
-
-
-        .div_ticket {
-            gap: 1.5em;
-        }
-
-        .ticket_avion {
-            width: 70%;
-            height: 60%;
-            padding: 0.4em 0.7em;
-            gap: 0.3em;
-            font-size: 0.55em;
-
-            article {
-
-                padding: 1em auto;
-
-                h4,
-                h5 {
-                    font-size: 1.5em;
-                }
-            }
-
-            .article_salida {
-                align-items: flex-end;
-            }
-
-            .article_trayecto {
-                gap: 0.2em;
-
-                article {
-                    gap: 0.2em;
-                }
-
-                .line {
-                    width: 4em;
-                }
-
-                .icon_avion {
-                    width: 2em;
-                    height: 0.6em;
-                }
-
-                h4,
-                h5 {
-                    font-size: 1em;
-                    margin: 0.1em 0;
-                }
-            }
-
-            .article_llegada {
-                align-items: flex-start;
-            }
-
-            .precio_contenedor {
-                margin-left: 0.3em;
-                gap: 1em;
-            }
-
-            .linea_vertical {
-                width: 0.3em;
-                height: 2em;
-            }
-
-            .precio {
+            h4,
+            h5 {
                 font-size: 1.5em;
             }
         }
 
-        .btn_generar_compra {
-            font-size: 0.8em;
+        .article_salida {
+            align-items: flex-end;
+        }
+
+        .article_trayecto {
             gap: 0.2em;
-            height: 1.8em;
 
-
-            .texto_aplicar {
-                display: none;
-                width: 0;
-                overflow: hidden;
+            article {
+                gap: 0.2em;
             }
 
-            .simbolo_peso {
-                width: 1.5em;
-                height: 1.5em;
+            .line {
+                width: 4em;
+            }
+
+            .icon_avion {
+                width: 2em;
+                height: 0.6em;
+            }
+
+            h4,
+            h5 {
+                font-size: 1em;
+                margin: 0.1em 0;
             }
         }
+
+        .article_llegada {
+            align-items: flex-start;
+        }
+
+        .precio_contenedor {
+            margin-left: 0.3em;
+            gap: 1em;
+        }
+
+        .linea_vertical {
+            width: 0.3em;
+            height: 2em;
+        }
+
+        .precio {
+            font-size: 1.5em;
+        }
     }
+
+    .btn_generar_compra {
+        font-size: 0.8em;
+        gap: 0.2em;
+        height: 1.8em;
+
+
+        .texto_aplicar {
+            display: none;
+            width: 0;
+            overflow: hidden;
+        }
+
+        .simbolo_peso {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+}
 }
