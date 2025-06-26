@@ -4,6 +4,7 @@
     --primary_color: #3C74A6;
     --primary_color_opacity: #3c75a682;
     --color_red_cancel: rgb(165, 4, 4);
+    --border-radius: 0.125em;
 }
 
 main {
@@ -121,6 +122,7 @@ main {
                 button {
                     cursor: pointer;
                     font-family: var(--primary_font);
+                    border-radius: var(--border-radius);
                 }
 
                 #btn_next{
