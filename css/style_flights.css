@@ -3,6 +3,7 @@
     --primary_font: "Source Sans 3", sans-serif;
     --primary_color: #3c74a6;
     --primary_color_opacity: #3c75a682;
+    --color_red_cancel: #a50404;
 }
 
 body {
@@ -94,19 +95,13 @@ main {
             font-size: 1.1em;
         }
 
-
         .btn {
             display: flex;
             padding: 0;
             gap: 0.5em;
-
-            justify-content: flex-end;
-
+            justify-content: center;
+            align-items: center;
             width: 100%;
-
-            padding-right: 40px;
-
-            gap: 10px;
 
             #btn_aplicar {
                 padding: 0.6em 1.5em;
@@ -132,31 +127,21 @@ main {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 2.5em;
-                height: 1.4em;
-                padding: 0.5em;
+                width: 1.8em;
+                height: 1.8em;
                 background-color: white;
-                border: 0.1em solid var(--primary_color);
+                border: 1px solid var(--primary_color);
                 color: var(--primary_color);
                 font-size: 1.3em;
-                margin: 10px;
 
                 &:hover {
-                    background-color: var(--primary_color_opacity);
+                    background-color: var(--color_red_cancel);
+                    color: white;
                     border: none;
-                }
-
-                .icono_basura {
-                    width: 1.3em;
-                    height: 1.3em;
-                    color: var(--primary_color);
                 }
             }
         }
     }
-
-
-
 
     .div_ticket {
         display: flex;
@@ -257,12 +242,6 @@ main {
 
         &:hover {
             background-color: var(--primary_color_opacity);
-        }
-
-        .simbolo_peso {
-            width: 1.6em;
-            height: 2.0em;
-            vertical-align: middle;
         }
     }
 
