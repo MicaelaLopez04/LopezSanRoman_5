@@ -107,6 +107,7 @@ main {
         }
 
         article {
+
             h4,
             h5 {
                 margin: 0.3em 0em;
@@ -190,5 +191,129 @@ main {
 
     button {
         cursor: pointer;
+    }
+}
+
+/* MEDIA QUERIES PARA MOBILE */
+@media (max-width:600px) {
+
+    .layout {
+        grid-template-columns: 100%;
+        grid-template-rows: 32vh 1fr;
+        grid-template-areas:
+            "header"
+            "main";
+        height: 100vh;
+    }
+
+    .nav_profile,
+    header {
+        display: none;
+    }
+
+    #header_mobile {
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: none;
+
+        #div_logo_nav {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            border-bottom: 3px solid var(--primary_color);
+
+            #div_logo {
+                background-image: url('../images/condor.png');
+                background-size: 100%;
+                width: 5em;
+                height: 5em;
+                margin: 0em 1em;
+            }
+
+            button {
+                width: 20%;
+                color: var(--primary_color);
+                font-size: 1.4em;
+                background: none;
+                border: none;
+            }
+
+            nav {
+                border: none;
+                padding: 0em;
+            }
+        }
+
+        #div_reservations {
+            display: flex;
+            align-items: flex-start;
+            gap: 1em;
+            padding: 1em 0.5em;
+            width: 100%;
+            border-bottom: 2px solid var(--primary_color);
+
+            h1 {
+                font-size: 2.5em;
+                margin: 0em;
+            }
+        }
+    }
+
+    main {
+        h3 {
+            margin: 0.8em 0.2em 0em;
+            font-weight: 400;
+            font-size: 1.5em;
+            color: rgb(65, 64, 64);
+        }
+
+        .div_ticket {
+            gap: 0em;
+        }
+
+        .ticket_avion {
+            gap: 0.8em;
+            border: 3px solid var(--primary_color_opacity);
+            padding: 1em 0.5em;
+            margin: 1em 0em 1.5em;
+            width: 90%;
+
+            .img_ticket {
+                background: none;
+                width: 0em;
+                height: 0em;
+                margin-right: 0em;
+            }
+
+            article {
+                h4,
+                h5 {
+                    font-size: 0.8em;
+                }
+            }
+
+            .article_trayecto {
+                .line {
+                    width: 8em;
+                }
+            }
+        }
+
+        .btn_info_ticket {
+            position:absolute;
+            right: 0.2em;
+            padding-top: 7.3em;
+        }
+
+        #buttons_reservations {
+            padding: 1em;
+
+            #btn_new_reservation {
+                font-size: 1.1em;
+            }
+        }
     }
 }
