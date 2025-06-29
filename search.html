@@ -28,8 +28,21 @@
             </nav>
 
             <header class="header_search">
-                <h1>Buscar Vuelos</h1>
+                <div class="header_mobile">
+                  <div id="logo"><img src="./images/condor.png" alt="condorLogo"></div>
+                  <button id="btn_hamburguesa" aria-label="Menú">☰</button>
+                </div>
+                  <h1>Buscar Vuelos</h1>
             </header>
+            
+            <nav class="nav_search" id="menu_nav">
+            <ul>
+                <li id="link_index">Inicio</li>
+                <li id="link_profile">Perfil</li>
+                <li id="link_reservations">Reservas</li>
+                <li id="link_search">Buscar</li>
+            </ul>
+        </nav>
 
             <main class="search">
                 <form class="search_form">
@@ -114,6 +127,7 @@
             </main>
         </div>
 
+        <script src="js/navs_private_mobile.js"></script>
         <script src="js/navs_private.js"></script>
         <script src="js/search.js"></script>
     </body>
