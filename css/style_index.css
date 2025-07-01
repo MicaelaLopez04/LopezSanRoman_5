@@ -70,6 +70,17 @@ main {
                     flex-direction: column;
                 }
 
+                #section_dates_form {
+                    display: flex;
+                    gap: 1.5em;
+                    
+                    #fecha_ida,
+                    #fecha_vuelta {
+                        height: 2.6em;
+                        width: 12em;
+                    }
+                }
+
                 label {
                     font-size: 1.2em;
                 }
@@ -84,11 +95,6 @@ main {
                 #origin,
                 #destiny {
                     width: 17em;
-                }
-
-                #fecha_ida,
-                #fecha_vuelta {
-                    width: 12em;
                 }
             }
         }
@@ -132,11 +138,17 @@ main {
         }
     }
 
+    #section_content_mobile {
+        display: none;
+    }
+
     #section_content {
         margin-top: 6em;
         display: flex;
         justify-content: space-evenly;
+    }
 
+    .content {
         .article_add {
             width: 10em;
             height: 100vh;
@@ -405,4 +417,160 @@ footer {
     background-color: #ddd;
     cursor: pointer;
     border-radius: 4px;
+}
+
+/* MEDIA QUERIES PARA MOBILE */
+@media (max-width:600px) {
+
+    main {
+        #img_index {
+            background: url('../images/img_index_mobile.jpg');
+            width: 100%;
+            height: 50vh;
+            background-size: 100%;
+        }
+
+        #div_form {
+            position: relative;
+            top: -2em;
+            left: 1.8em;
+            box-shadow: 0 0 0 3px var(--primary_color_opacity);
+
+            form {
+                flex-direction: column;
+
+                .form_radio {
+                    label {
+                        font-size: 1.2em;
+                    }
+                }
+
+                .form_border {
+                    flex-direction: column;
+                    align-items: center;
+
+                    #section_dates_form {
+                        #fecha_ida,
+                        #fecha_vuelta {
+                            width: 10em;
+                        }
+                    }
+
+                    .div_campo {
+                        label {
+                            font-size: 1em;
+                        }
+                    }
+
+                    #toggle_clase_pasajeros {
+                        height: 2.5em;
+                    }
+
+                    #origin,
+                    #destiny {
+                        width: 22em;
+                    }
+                }
+            }
+
+            .button_search {
+                flex-direction: column;
+            }
+        }
+
+        #section_content {
+            display: none;
+        }
+
+        #section_content_mobile {
+            margin-top: 0em;
+            display: flex;
+        }
+        
+        .content {
+            #article_content {
+                width: 100%;
+
+                h2 {
+                    font-size: 1.3em;
+                }
+
+                #carrusel_desc {
+                    height: 13em;
+
+                    .section_desc {
+                        width: 90%;
+                        height: 90%;
+                    }
+                }
+
+                .article_add {
+                    width: 90%;
+                    height: 35vh;
+                    background: url('../images/add_horizontal.png');
+                    background-size: 100%;
+                }
+
+                #article_tarjetas {
+                    height: 20%;
+
+                    section {
+                        margin: 0.5em 0em;
+                    }
+
+                    div {
+                        height: 2em;
+                        width: 4em;
+                    }
+
+                    #galicia {
+                        background-size: 85% 50%;
+                    }
+
+                    #santander {
+                        background-size: 85% 30%;
+                    }
+
+                    #naranjax {
+                        background-size: 85% 50%;
+                    }
+
+                    #bbva {
+                        background-size: 75% 35%;
+                    }
+
+                    #bna {
+                        background-size: 80% 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        margin-top: 0em;
+
+        h3,
+        h4 {
+            font-weight: 400;
+            margin: 0em;
+        }
+
+        #section_social {
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            h3 {
+                font-size: 1em;
+            }
+        }
+
+        #section_legal {
+            h4 {
+                font-size: 0.8em;
+            }
+        }
+    }
 }

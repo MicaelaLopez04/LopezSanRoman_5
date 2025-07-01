@@ -39,11 +39,11 @@
         <nav id="nav_mobile">
             <button>
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-list"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-            </svg>
-        </button>
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </button>
         </nav>
     </header>
 
@@ -67,15 +67,16 @@
                         <input type="text" id="destiny" placeholder="Ingrese su destino">
                     </div>
 
-
-                    <div class="div_campo">
-                        <label for="fecha_ida">Fecha de ida</label>
-                        <input type="date" id="fecha_ida" name="fecha_ida" required>
-                    </div>
-                    <div class="div_campo">
-                        <label for="fecha_vuelta">Fecha de vuelta</label>
-                        <input type="date" id="fecha_vuelta" name="fecha_vuelta" required>
-                    </div>
+                    <section id="section_dates_form">
+                        <div class="div_campo">
+                            <label for="fecha_ida">Fecha de ida</label>
+                            <input type="date" id="fecha_ida" name="fecha_ida" required>
+                        </div>
+                        <div class="div_campo">
+                            <label for="fecha_vuelta">Fecha de vuelta</label>
+                            <input type="date" id="fecha_vuelta" name="fecha_vuelta" required>
+                        </div>
+                    </section>
 
                     <div id="fila3" class="selector_clase_pasajeros">
                         <label for="toggle_clase_pasajeros">Clase / Pasajeros/as</label>
@@ -124,7 +125,43 @@
             </div>
         </div>
 
-        <section id="section_content">
+        <section id="section_content_mobile" class="content">
+            <article id="article_content">
+                <h2>Descuentos que no puede perder</h2>
+                <article id="carrusel_desc">
+                    <section class="section_desc">
+                        <div class="img_desc" id="desc_uno"></div>
+                        <div class="about_desc">
+                            <h4>Ida</h4>
+                            <h4>500.000 ARS</h4>
+                            <h4>Economy</h4>
+                        </div>
+                    </section>
+                </article>
+                <div id="inputs_carrusel">
+                    <input type="radio" checked>
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio">
+                </div>
+                <article class="article_add"></article>
+                <h2>Financiacion</h2>
+                <article id="article_tarjetas">
+                    <section>
+                        <div id="galicia"></div>
+                        <div id="santander"></div>
+                        <div id="naranjax"></div>
+                    </section>
+                    <section>
+                        <div id="bbva"></div>
+                        <div id="bna"></div>
+                    </section>
+                </article>
+            </article>
+        </section>
+
+        <section id="section_content" class="content">
             <article class="article_add" id="add1"></article>
             <article id="article_content">
                 <h2>Descuentos que no puede perder</h2>
