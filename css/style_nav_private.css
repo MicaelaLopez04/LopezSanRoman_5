@@ -1,0 +1,114 @@
+.layout {
+    font-family: var(--primary_font);
+    display: grid;
+    grid-template-columns: 10em 1fr;
+    /* nav y el resto */
+    grid-template-rows: 30vh 1fr;
+    /* header y main */
+    grid-template-areas:
+        "nav header"
+        "nav main";
+    height: 100vh;
+    /* para que tome todo el alto */
+}
+
+nav {
+    grid-area: nav;
+    padding: 1.8em 0em 1.2em 0em;
+    border-right: 8px solid var(--primary_color_opacity);
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            padding-left: 0.5em;
+            height: 3.2em;
+            color: var(--primary_color);
+            font-size: 25px;
+            cursor: pointer;
+
+            &:hover {
+                color: #ffffff;
+                background-color: var(--primary_color_opacity);
+                border-left: 5px solid var(--primary_color);
+            }
+        }
+    }
+}
+
+/* MEDIA QUERIES PARA MOBILE */
+@media (max-width:600px) {
+
+    .layout {
+        grid-template-columns: 100%;
+        grid-template-rows: 32vh 1fr;
+        grid-template-areas:
+            "header"
+            "main";
+        height: 100vh;
+
+        nav,
+        header {
+            display: none;
+        }
+    }
+
+    #header_mobile {
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: none;
+
+        #nav_mobile {
+            display: block;
+        }
+
+        #div_logo_nav {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            border-bottom: 3px solid var(--primary_color);
+
+            #div_logo {
+                background-image: url('../images/condor.png');
+                background-size: 100%;
+                width: 5em;
+                height: 5em;
+                margin: 0em 1em;
+            }
+
+            nav {
+                border: none;
+                padding: 0em;
+
+                button {
+                    width: 20%;
+                    color: var(--primary_color);
+                    font-size: 1.4em;
+                    background: none;
+                    border: none;
+                }
+            }
+        }
+
+        #div_reservations {
+            display: flex;
+            align-items: flex-start;
+            gap: 1em;
+            padding: 1em 0.5em;
+            width: 100%;
+            border-bottom: 2px solid var(--primary_color);
+
+            h1 {
+                font-size: 2.5em;
+                margin: 0em;
+            }
+        }
+    }
+}
