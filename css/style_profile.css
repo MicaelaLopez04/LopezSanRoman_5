@@ -6,51 +6,16 @@
     --color_red_cancel: #a50404;
 }
 
-.container {
-    font-family: var(--primary_font);
-    display: grid;
-    grid-template-columns: 10em 1fr;
-    /* nav y el resto */
-    grid-template-rows: 30vh 1fr;
-    /* header y main */
-    grid-template-areas:
-        "nav header"
-        "nav main";
-    height: 100vh;
-    /* para que tome todo el alto */
+#header_mobile {
+    display: none;
 }
 
-.nav_profile {
-    grid-area: nav;
-    padding: 1.8em 0em 1.2em 0em;
-    border-right: 8px solid var(--primary_color_opacity);
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    display: flex;
-    align-items: center;
-    padding-left: 0.5em;
-    height: 3.2em;
-    color: var(--primary_color);
-    font-size: 25px;
-    cursor: pointer;
-}
-
-li:hover {
-    color: #ffffff;
-    background-color: var(--primary_color_opacity);
-    border-left: 5px solid var(--primary_color);
-}
-
-#link_profile {
-    color: #ffffff;
-    background-color: var(--primary_color_opacity);
-    border-left: 5px solid var(--primary_color);
+nav {
+    #link_profile {
+        color: #ffffff;
+        background-color: var(--primary_color_opacity);
+        border-left: 5px solid var(--primary_color);
+    }
 }
 
 .profile {
@@ -62,6 +27,7 @@ li:hover {
     grid-area: header;
     display: flex;
     border-bottom: 4px solid var(--primary_color);
+    align-items: center;
 }
 
 #profile_pic {
@@ -87,7 +53,7 @@ h1 {
     font-size: 60px;
     font-weight: 400;
     color: var(--primary_color);
-    margin-bottom: 0em;
+    margin: 0em;
 }
 
 a {
@@ -95,6 +61,19 @@ a {
     color: #808080;
     font-size: 21px;
     font-weight: 400;
+}
+
+#btn_edit_profile_pic {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.6em;
+    color: white;
+    border: 2px solid white;
+    background-color: var(--primary_color);
+    position: absolute;
+    left: 25.5em;
+    top: 11em;
 }
 
 .profile_form {
@@ -107,15 +86,16 @@ a {
     display: flex;
     flex-direction: column;
     color: #808080;
-    font-size: 25px;
+    font-size: 1.5em;
     margin: 0.5em 0em;
 }
 
 .profile_form span {
-    margin: 10px 10px 25px 10px;
+    margin: 0.5em;
     text-decoration: underline;
     color: var(--primary_color);
     font-style: italic;
+    font-size: 0.8em;
 }
 
 .button_profile {
@@ -175,49 +155,7 @@ a {
 /* MEDIA QUERIES PARA MOBILE */
 @media (max-width:600px) {
 
-    .container {
-        grid-template-columns: 100%;
-        grid-template-rows: 40vh 1fr;
-        grid-template-areas:
-            "header"
-            "main";
-        height: 100vh;
-    }
-
-    .nav_profile,
-    .header_profile {
-        display: none;
-    }
-
     #header_mobile {
-        grid-area: header;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        #div_logo_nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 3px solid var(--primary_color);
-
-            #div_logo {
-                background-image: url('../images/condor.png');
-                background-size: 100%;
-                width: 5em;
-                height: 5em;
-                margin: 0em 1em;
-            }
-
-            button {
-                width: 20%;
-                color: var(--primary_color);
-                font-size: 1.4em;
-                background: none;
-                border: none;
-            }
-        }
-
         #div_perfil_foto {
             display: flex;
             align-items: center;
@@ -244,6 +182,16 @@ a {
 
             a {
                 font-size: 0.8em;
+            }
+
+            #btn_edit_profile_pic {
+                left: 6.5em;
+                top: 13.5em;
+
+                svg {
+                    width: 13px;
+                    height: 13px;
+                }
             }
         }
     }
