@@ -1,7 +1,7 @@
 # 🛫 Proyecto: Aerolíneas Argentinas - Rediseño y Optimización
 
 ## 📍 Índice
-1. [Análisis e Investigación](##analisis-e-investigacion)
+1. [Analisis e Investigacion](#analisis-e-investigacion)
 2. [Diseño Visual](#diseño-visual)
 3. [Prototipado](#prototipado)
 4. [Desarrollo](#desarrollo)
@@ -89,27 +89,27 @@ Ser la empresa emblema y orgullo de la República Argentina, reconocida por su g
 
 ---
 
-## 🎨 Diseño Visual
+## Diseño Visual
 
 ### 🖋 Fuente
 - [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)
   - Regular 400: `Mi reserva`
   - Regular 400 Italic: *Mi reserva*
 
-### 🎨 Paleta de colores
+### Paleta de colores
 
 ![Paleta de colores](./assets/paleta.png)
 
 ---
 
-## 🧪 Prototipado
+## Prototipado
 
 Ver prototipo en Miro:  
 👉 [Acceder al tablero](https://miro.com/app/board/uXjVIpiKVa8=/?share_link_id=817698885936) 
 
 ---
 
-## 💻 Desarrollo
+## Desarrollo
 
 Tecnologías utilizadas:
 
