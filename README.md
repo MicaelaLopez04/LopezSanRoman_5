@@ -6,7 +6,7 @@
 3. [Prototipado](#prototipado)
 4. [Desarrollo](#desarrollo)
 
-## 🧠 Análisis e Investigación
+## Analisis e Investigacion 🧠
 
 ### 🔷 Misión
 Conectar a los argentinos y contribuir al desarrollo social y económico del país, promoviendo el territorio nacional como destino turístico, cultural y de negocios.
