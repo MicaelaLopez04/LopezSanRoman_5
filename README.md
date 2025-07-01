@@ -1,12 +1,12 @@
 # 🛫 Proyecto: Aerolíneas Argentinas - Rediseño y Optimización
 
 ## 📍 Índice
-1. [Análisis e Investigación](#analisis-e-investigacion)
+1. [Análisis e Investigación](##analisis-e-investigacion)
 2. [Diseño Visual](#diseño-visual)
 3. [Prototipado](#prototipado)
 4. [Desarrollo](#desarrollo)
 
-## Analisis e Investigacion 🧠
+## Analisis e Investigacion
 
 ### 🔷 Misión
 Conectar a los argentinos y contribuir al desarrollo social y económico del país, promoviendo el territorio nacional como destino turístico, cultural y de negocios.
