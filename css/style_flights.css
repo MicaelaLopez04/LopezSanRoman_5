@@ -12,7 +12,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 17em 1fr;
+    grid-template-columns: 10em 1fr;
     grid-template-rows: 18vh 1fr;
     grid-template-areas:
         "nav header"
@@ -21,37 +21,11 @@ body {
 }
 
 .nav_flight {
-    grid-area: nav;
-    padding: 1.8em 0em 1.2em 0em;
-    border-right: 8px solid var(--primary_color_opacity);
-}
-
-ul {
-    list-style: none;
-    padding: 0em;
-}
-
-li {
-    display: flex;
-    align-items: center;
-    padding-left: 0.5em;
-    height: 3.2em;
-    color: var(--primary_color);
-    font-size: 25px;
-    cursor: pointer;
-
-}
-
-li:hover {
-    color: white;
-    background-color: var(--primary_color_opacity);
-    border-left: 5px solid var(--primary_color);
-}
-
-#link_search {
-    color: white;
-    background-color: var(--primary_color_opacity);
-    border-left: 5px solid var(--primary_color);
+    #link_search {
+        color: white;
+        background-color: var(--primary_color_opacity);
+        border-left: 5px solid var(--primary_color);
+    }
 }
 
 header {
@@ -70,7 +44,8 @@ header {
 }
 
 #btn_hamburguesa,
-#menu_nav, #logo{
+#menu_nav,
+#logo {
     display: none;
     /* solo mobile */
 }
@@ -286,7 +261,7 @@ main {
 }
 
 @media (max-width: 767px) {
-     .container {
+    .container {
         display: flex;
         flex-direction: column;
         height: 100vh;
@@ -361,172 +336,174 @@ main {
     }
 
 
-main {
-    grid-area: unset;
-    padding: 1em;
-    overflow-y: auto;
+    main {
+        grid-area: unset;
+        padding: 1em;
+        overflow-y: auto;
 
-    .filtros {
-        display: none !important;
+        .filtros {
+            display: none !important;
 
 
-    }
-
-    .filtros_mobile {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 1em;
-        flex-wrap: nowrap;
-
-        #btn_filtrar,
-        .btn_toggle,
-        select {
-            font-size: 0.8em;
-            padding: 0.3em 0.5em;
-            background-color: white;
-            color: var(--primary_color);
-            border: 0.06em solid var(--primary_color);
         }
 
-        #contenedor_filtros {
+        .filtros_mobile {
             display: flex;
-            flex-direction: column;
-            gap: 0.5em;
-        }
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1em;
+            flex-wrap: nowrap;
 
-        .btn {
-            display: flex;
-            justify-content: flex-end;
-            width: auto;
-            gap: 0.5em;
-            background-color: white;
-            padding-right: 0;
-
-
-            #btn_aplicar {
-                font-size: 1em;
-                padding: 0.4em 1em;
-
-                &:hover {
-                    background-color: var(--primary_color_opacity);
-                    border: none;
-                }
-
+            #btn_filtrar,
+            .btn_toggle,
+            select {
+                font-size: 0.8em;
+                padding: 0.3em 0.5em;
+                background-color: white;
+                color: var(--primary_color);
+                border: 0.06em solid var(--primary_color);
             }
 
-            #btn_borrar {
-                display: flex;              /* activa flexbox */
-                align-items: center;        /* centra verticalmente */
-                justify-content: center; 
-                width: 2em;
-                height: 2em;
-                font-size: 1em;
-                margin: 0.4em;
-                background-color: white;
-                border: 0.1em solid var(--primary_color);
-                color: var(--primary_color);
+            #contenedor_filtros {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+            }
 
-                &:hover {
-                    background-color: var(--color_red_cancel);
-                    color: white;
-                    border: none;
+            .btn {
+                display: flex;
+                justify-content: flex-end;
+                width: auto;
+                gap: 0.5em;
+                background-color: white;
+                padding-right: 0;
+
+
+                #btn_aplicar {
+                    font-size: 1em;
+                    padding: 0.4em 1em;
+
+                    &:hover {
+                        background-color: var(--primary_color_opacity);
+                        border: none;
+                    }
+
                 }
 
-                .icono_basura {
+                #btn_borrar {
+                    display: flex;
+                    /* activa flexbox */
+                    align-items: center;
+                    /* centra verticalmente */
+                    justify-content: center;
                     width: 2em;
                     height: 2em;
+                    font-size: 1em;
+                    margin: 0.4em;
+                    background-color: white;
+                    border: 0.1em solid var(--primary_color);
                     color: var(--primary_color);
+
+                    &:hover {
+                        background-color: var(--color_red_cancel);
+                        color: white;
+                        border: none;
+                    }
+
+                    .icono_basura {
+                        width: 2em;
+                        height: 2em;
+                        color: var(--primary_color);
+                    }
                 }
             }
         }
-    }
 
 
-    .div_ticket {
-        gap: 1.5em;
-    }
+        .div_ticket {
+            gap: 1.5em;
+        }
 
-    .ticket_avion {
-        width: 70%;
-        height: 60%;
-        padding: 0.4em 0.7em;
-        gap: 0.3em;
-        font-size: 0.55em;
+        .ticket_avion {
+            width: 70%;
+            height: 60%;
+            padding: 0.4em 0.7em;
+            gap: 0.3em;
+            font-size: 0.55em;
 
-        article {
+            article {
 
-            padding: 1em auto;
+                padding: 1em auto;
 
-            h4,
-            h5 {
+                h4,
+                h5 {
+                    font-size: 1.5em;
+                }
+            }
+
+            .article_salida {
+                align-items: flex-end;
+            }
+
+            .article_trayecto {
+                gap: 0.2em;
+
+                article {
+                    gap: 0.2em;
+                }
+
+                .line {
+                    width: 4em;
+                }
+
+                .icon_avion {
+                    width: 2em;
+                    height: 0.6em;
+                }
+
+                h4,
+                h5 {
+                    font-size: 1em;
+                    margin: 0.1em 0;
+                }
+            }
+
+            .article_llegada {
+                align-items: flex-start;
+            }
+
+            .precio_contenedor {
+                margin-left: 0.3em;
+                gap: 1em;
+            }
+
+            .linea_vertical {
+                width: 0.3em;
+                height: 2em;
+            }
+
+            .precio {
                 font-size: 1.5em;
             }
         }
 
-        .article_salida {
-            align-items: flex-end;
-        }
-
-        .article_trayecto {
+        .btn_generar_compra {
+            font-size: 0.8em;
             gap: 0.2em;
+            height: 1.8em;
 
-            article {
-                gap: 0.2em;
+
+            .texto_aplicar {
+                display: none;
+                width: 0;
+                overflow: hidden;
             }
 
-            .line {
-                width: 4em;
+            .simbolo_peso {
+                width: 1.5em;
+                height: 1.5em;
             }
-
-            .icon_avion {
-                width: 2em;
-                height: 0.6em;
-            }
-
-            h4,
-            h5 {
-                font-size: 1em;
-                margin: 0.1em 0;
-            }
-        }
-
-        .article_llegada {
-            align-items: flex-start;
-        }
-
-        .precio_contenedor {
-            margin-left: 0.3em;
-            gap: 1em;
-        }
-
-        .linea_vertical {
-            width: 0.3em;
-            height: 2em;
-        }
-
-        .precio {
-            font-size: 1.5em;
         }
     }
-
-    .btn_generar_compra {
-        font-size: 0.8em;
-        gap: 0.2em;
-        height: 1.8em;
-
-
-        .texto_aplicar {
-            display: none;
-            width: 0;
-            overflow: hidden;
-        }
-
-        .simbolo_peso {
-            width: 1.5em;
-            height: 1.5em;
-        }
-    }
-}
 }

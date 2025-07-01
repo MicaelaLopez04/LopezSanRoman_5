@@ -21,35 +21,10 @@
 }
 
 .nav_search {
-    grid-area: nav;
-    padding: 1.8em 0em 1.2em 0em;
-    border-right: 8px solid var(--primary_color_opacity);
-
     #link_search {
         color: white;
         background-color: var(--primary_color_opacity);
-        border-left: 0.4em solid var(--primary_color);
-    }
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    display: flex;
-    align-items: center;
-    padding-left: 0.5em;
-    height: 3.2em;
-    color: var(--primary_color);
-    font-size: 1.5em;
-    cursor: pointer;
-
-    &:hover {
-        color: #ffffff;
-        background-color: var(--primary_color_opacity);
-        border-left: 0.4em solid var(--primary_color);
+        border-left: 5px solid var(--primary_color);
     }
 }
 

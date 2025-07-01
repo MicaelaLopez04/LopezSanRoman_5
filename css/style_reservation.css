@@ -5,49 +5,11 @@
     --primary_color_opacity: #3c75a682;
 }
 
-body {
-    font-family: var(--primary_font);
-}
-
-.layout {
-    display: grid;
-    grid-template-columns: 10em 1fr;
-    /* nav y el resto */
-    grid-template-rows: 18vh 1fr;
-    /* header y main */
-    grid-template-areas:
-        "nav header"
-        "nav main";
-    height: 100vh;
-    /* para que tome todo el alto */
+#header_mobile {
+    display: none;
 }
 
 nav {
-    grid-area: nav;
-    padding: 1.8em 0em 1.2em 0em;
-    border-right: 8px solid var(--primary_color_opacity);
-
-    ul {
-        list-style: none;
-        padding: 0em;
-
-        li {
-            display: flex;
-            align-items: center;
-            padding-left: 0.5em;
-            height: 3.2em;
-            color: var(--primary_color);
-            font-size: 25px;
-            cursor: pointer;
-
-            &:hover {
-                color: white;
-                background-color: var(--primary_color_opacity);
-                border-left: 5px solid var(--primary_color);
-            }
-        }
-    }
-
     #link_reservations {
         color: white;
         background-color: var(--primary_color_opacity);
@@ -206,62 +168,6 @@ main {
         height: 100vh;
     }
 
-    .nav_profile,
-    header {
-        display: none;
-    }
-
-    #header_mobile {
-        grid-area: header;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        border: none;
-
-        #div_logo_nav {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            justify-content: space-between;
-            border-bottom: 3px solid var(--primary_color);
-
-            #div_logo {
-                background-image: url('../images/condor.png');
-                background-size: 100%;
-                width: 5em;
-                height: 5em;
-                margin: 0em 1em;
-            }
-
-            button {
-                width: 20%;
-                color: var(--primary_color);
-                font-size: 1.4em;
-                background: none;
-                border: none;
-            }
-
-            nav {
-                border: none;
-                padding: 0em;
-            }
-        }
-
-        #div_reservations {
-            display: flex;
-            align-items: flex-start;
-            gap: 1em;
-            padding: 1em 0.5em;
-            width: 100%;
-            border-bottom: 2px solid var(--primary_color);
-
-            h1 {
-                font-size: 2.5em;
-                margin: 0em;
-            }
-        }
-    }
-
     main {
         h3 {
             margin: 0.8em 0.2em 0em;
@@ -303,7 +209,7 @@ main {
         }
 
         .btn_info_ticket {
-            position:absolute;
+            position: absolute;
             right: 0.2em;
             padding-top: 7.3em;
         }
